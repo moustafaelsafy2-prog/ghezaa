@@ -486,16 +486,18 @@
               <input type="text" id="wa-name" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-gold outline-none bg-white text-dark text-start" />
             </div>
             <div>
+              <!-- تم تغيير نوع الحقل إلى text وإضافة inputmode لضمان قبول الأرقام بجميع اللغات -->
               <label class="block text-sm font-bold text-primary mb-2 text-start" for="wa-age" data-i18n="lbl_age">العمر</label>
-              <input type="number" id="wa-age" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-gold outline-none bg-white text-dark text-start" />
+              <input type="text" inputmode="numeric" id="wa-age" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-gold outline-none bg-white text-dark text-start" />
             </div>
             <div>
               <label class="block text-sm font-bold text-primary mb-2 text-start" for="wa-city" data-i18n="lbl_city">المدينة</label>
               <input type="text" id="wa-city" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-gold outline-none bg-white text-dark text-start" />
             </div>
             <div>
+              <!-- تم تغيير نوع الحقل إلى text وإضافة inputmode لضمان قبول الأرقام بجميع اللغات -->
               <label class="block text-sm font-bold text-primary mb-2 text-start" for="wa-weight" data-i18n="lbl_weight">الوزن الحالي</label>
-              <input type="number" id="wa-weight" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-gold outline-none bg-white text-dark text-start" />
+              <input type="text" inputmode="numeric" id="wa-weight" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-gold outline-none bg-white text-dark text-start" />
             </div>
           </div>
           <div>
@@ -910,11 +912,31 @@
       });
     }
 
+    // دالة لتحويل الأرقام العربية إلى إنجليزية لتمرير التقييم بنجاح
+    function convertToArabicAndEnglishLive(e) {
+      const arabicNumbers = [/٠/g, /١/g, /٢/g, /٣/g, /٤/g, /٥/g, /٦/g, /٧/g, /٨/g, /٩/g];
+      let val = e.target.value;
+      for (let i = 0; i < 10; i++) {
+          val = val.replace(arabicNumbers[i], i);
+      }
+      // إزالة أي رموز أو حروف (الإبقاء فقط على الأرقام الإنجليزية)
+      e.target.value = val.replace(/[^0-9]/g, '');
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
       // Setup Language Switcher
       const langSelector = document.getElementById('langSelector');
       langSelector.addEventListener('change', (e) => {
         changeLanguage(e.target.value);
+      });
+
+      // إرفاق دالة تحويل الأرقام بحقول العمر والوزن
+      const numberInputs = ['wa-age', 'wa-weight'];
+      numberInputs.forEach(id => {
+          const input = document.getElementById(id);
+          if (input) {
+              input.addEventListener('input', convertToArabicAndEnglishLive);
+          }
       });
 
       const observer = new IntersectionObserver(function (entries) {
@@ -995,5 +1017,6 @@
   </script>
 </body>
 </html>
+
 
 ```
