@@ -144,6 +144,8 @@
   </div>
 
   <div class="fixed inset-0 bg-moroccan-pattern pointer-events-none z-[-1]"></div>
+  
+  <!-- Hero Section -->
   <section class="relative min-h-[90vh] flex items-center justify-center pt-10 pb-20 overflow-hidden bg-gradient-to-br from-primary via-primaryLight to-[#0a2e1f] animate-gradient-xy text-white">
     <div class="absolute inset-0 z-0">
       <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fm=webp&fit=crop&w=2070&q=80" alt="صحة ونشاط" class="w-full h-full object-cover opacity-20 mix-blend-overlay" />
@@ -176,6 +178,7 @@
     </div>
   </section>
 
+  <!-- Pains Section -->
   <section class="py-20 bg-light">
     <div class="container mx-auto px-6 max-w-6xl">
       <div class="text-center mb-16 fade-up">
@@ -217,6 +220,7 @@
     </div>
   </section>
 
+  <!-- Quote Section -->
   <section class="py-20 bg-white relative overflow-hidden">
     <div class="container mx-auto px-6 max-w-4xl text-center fade-up relative z-10">
       <i class="fas fa-quote-right rtl:fa-quote-right ltr:fa-quote-left text-4xl text-gold/50 mb-6"></i>
@@ -236,6 +240,7 @@
     </div>
   </section>
 
+  <!-- How It Works Section -->
   <section class="py-20 bg-light">
     <div class="container mx-auto px-6 max-w-6xl">
       <div class="text-center mb-16 fade-up">
@@ -283,62 +288,115 @@
     </div>
   </section>
 
+  <!-- Success Stories (Instagram Reels) -->
   <section class="py-20 bg-primary text-white relative">
-    <div class="container mx-auto px-6 max-w-6xl">
+    <div class="container mx-auto px-6 max-w-7xl">
       <div class="text-center mb-16 fade-up">
         <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="success_title">قصص نجاح من الواقع</h2>
         <div class="h-1 w-24 bg-gold mx-auto rounded-full mb-6"></div>
         <p class="text-gray-300 text-lg" data-i18n="success_desc">استمع لتجارب حقيقية لأشخاص غيروا حياتهم الصحية معنا</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-primaryLight rounded-2xl overflow-hidden shadow-2xl fade-up">
-          <div class="aspect-video bg-gray-900 relative flex items-center justify-center">
-            <p class="text-gray-400 absolute">VIDEO_LINK_1</p>
-            <i class="fab fa-youtube text-5xl text-red-600 opacity-90"></i>
+      
+      <!-- 4 Columns Grid for Instagram Reels -->
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        
+        <!-- Story 1 -->
+        <div class="bg-primaryLight rounded-2xl overflow-hidden shadow-2xl fade-up flex flex-col transform transition-transform hover:-translate-y-2 duration-300">
+          <div class="w-full bg-white relative">
+            <iframe class="w-full h-[520px] border-0" src="https://www.instagram.com/reel/DZ_AL6joFqM/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
           </div>
-          <div class="p-6">
+          <div class="p-5 flex-grow flex flex-col justify-between">
             <div class="flex justify-between items-center mb-4">
-              <h3 class="font-bold text-xl text-gold" data-i18n="story1_name">فاطمة الزهراء</h3>
-              <span class="bg-white/10 text-sm px-3 py-1 rounded-full" data-i18n="story1_city">الدار البيضاء</span>
+              <h3 class="font-bold text-lg text-gold" data-i18n="story1_name">فاطمة الزهراء</h3>
+              <span class="bg-white/10 text-xs px-2 py-1 rounded-full" data-i18n="story1_city">الدار البيضاء</span>
             </div>
-            <div class="flex gap-4 text-sm bg-black/20 p-3 rounded-lg">
-              <div class="flex-1 text-center border-s border-white/10">
-                <span class="block text-gray-400 text-xs" data-i18n="before">الحالة قبل</span>
-                <span class="font-bold" data-i18n="story1_before">خمول ومقاومة إنسولين</span>
+            <div class="flex flex-col gap-2 text-sm bg-black/20 p-3 rounded-lg">
+              <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                <span class="text-gray-400 text-xs" data-i18n="before">الحالة قبل:</span>
+                <span class="font-bold text-end" data-i18n="story1_before">خمول ومقاومة إنسولين</span>
               </div>
-              <div class="flex-1 text-center">
-                <span class="block text-gray-400 text-xs" data-i18n="after">النتيجة بعد</span>
-                <span class="font-bold text-green-400" data-i18n="story1_after">صحة ممتازة ونشاط</span>
+              <div class="flex justify-between items-center pt-1">
+                <span class="text-gray-400 text-xs" data-i18n="after">النتيجة بعد:</span>
+                <span class="font-bold text-green-400 text-end" data-i18n="story1_after">صحة ممتازة ونشاط</span>
               </div>
             </div>
           </div>
         </div>
-        <div class="bg-primaryLight rounded-2xl overflow-hidden shadow-2xl fade-up">
-          <div class="aspect-video bg-gray-900 relative flex items-center justify-center">
-            <p class="text-gray-400 absolute">VIDEO_LINK_2</p>
-            <i class="fab fa-youtube text-5xl text-red-600 opacity-90"></i>
+
+        <!-- Story 2 -->
+        <div class="bg-primaryLight rounded-2xl overflow-hidden shadow-2xl fade-up flex flex-col transform transition-transform hover:-translate-y-2 duration-300" style="transition-delay: 100ms;">
+          <div class="w-full bg-white relative">
+            <iframe class="w-full h-[520px] border-0" src="https://www.instagram.com/reel/DZ8D7cMIB32/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
           </div>
-          <div class="p-6">
+          <div class="p-5 flex-grow flex flex-col justify-between">
             <div class="flex justify-between items-center mb-4">
-              <h3 class="font-bold text-xl text-gold" data-i18n="story2_name">أحمد</h3>
-              <span class="bg-white/10 text-sm px-3 py-1 rounded-full" data-i18n="story2_city">الرباط</span>
+              <h3 class="font-bold text-lg text-gold" data-i18n="story2_name">أحمد</h3>
+              <span class="bg-white/10 text-xs px-2 py-1 rounded-full" data-i18n="story2_city">الرباط</span>
             </div>
-            <div class="flex gap-4 text-sm bg-black/20 p-3 rounded-lg">
-              <div class="flex-1 text-center border-s border-white/10">
-                <span class="block text-gray-400 text-xs" data-i18n="before">الحالة قبل</span>
-                <span class="font-bold" data-i18n="story2_before">سمنة وصعوبة في الحركة</span>
+            <div class="flex flex-col gap-2 text-sm bg-black/20 p-3 rounded-lg">
+              <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                <span class="text-gray-400 text-xs" data-i18n="before">الحالة قبل:</span>
+                <span class="font-bold text-end" data-i18n="story2_before">سمنة وصعوبة في الحركة</span>
               </div>
-              <div class="flex-1 text-center">
-                <span class="block text-gray-400 text-xs" data-i18n="after">النتيجة بعد</span>
-                <span class="font-bold text-green-400" data-i18n="story2_after">لياقة وثقة بالنفس</span>
+              <div class="flex justify-between items-center pt-1">
+                <span class="text-gray-400 text-xs" data-i18n="after">النتيجة بعد:</span>
+                <span class="font-bold text-green-400 text-end" data-i18n="story2_after">لياقة وثقة بالنفس</span>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Story 3 -->
+        <div class="bg-primaryLight rounded-2xl overflow-hidden shadow-2xl fade-up flex flex-col transform transition-transform hover:-translate-y-2 duration-300" style="transition-delay: 200ms;">
+          <div class="w-full bg-white relative">
+            <iframe class="w-full h-[520px] border-0" src="https://www.instagram.com/reel/DZ5zzBBzwmW/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+          <div class="p-5 flex-grow flex flex-col justify-between">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="font-bold text-lg text-gold" data-i18n="story3_name">مريم</h3>
+              <span class="bg-white/10 text-xs px-2 py-1 rounded-full" data-i18n="story3_city">مراكش</span>
+            </div>
+            <div class="flex flex-col gap-2 text-sm bg-black/20 p-3 rounded-lg">
+              <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                <span class="text-gray-400 text-xs" data-i18n="before">الحالة قبل:</span>
+                <span class="font-bold text-end" data-i18n="story3_before">وزن زائد وإرهاق</span>
+              </div>
+              <div class="flex justify-between items-center pt-1">
+                <span class="text-gray-400 text-xs" data-i18n="after">النتيجة بعد:</span>
+                <span class="font-bold text-green-400 text-end" data-i18n="story3_after">حيوية ولياقة</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 4 -->
+        <div class="bg-primaryLight rounded-2xl overflow-hidden shadow-2xl fade-up flex flex-col transform transition-transform hover:-translate-y-2 duration-300" style="transition-delay: 300ms;">
+          <div class="w-full bg-white relative">
+            <iframe class="w-full h-[520px] border-0" src="https://www.instagram.com/reel/DZ5iZhtot2S/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+          </div>
+          <div class="p-5 flex-grow flex flex-col justify-between">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="font-bold text-lg text-gold" data-i18n="story4_name">خديجة</h3>
+              <span class="bg-white/10 text-xs px-2 py-1 rounded-full" data-i18n="story4_city">أكادير</span>
+            </div>
+            <div class="flex flex-col gap-2 text-sm bg-black/20 p-3 rounded-lg">
+              <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                <span class="text-gray-400 text-xs" data-i18n="before">الحالة قبل:</span>
+                <span class="font-bold text-end" data-i18n="story4_before">عادات سيئة</span>
+              </div>
+              <div class="flex justify-between items-center pt-1">
+                <span class="text-gray-400 text-xs" data-i18n="after">النتيجة بعد:</span>
+                <span class="font-bold text-green-400 text-end" data-i18n="story4_after">أسلوب حياة صحي</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
+  <!-- Transform Section -->
   <section class="py-24 bg-white border-t border-gray-100">
     <div class="container mx-auto px-6 max-w-6xl">
       <div class="text-center mb-16 fade-up">
@@ -374,6 +432,7 @@
     </div>
   </section>
 
+  <!-- Why Us Section -->
   <section class="py-20 bg-primaryLight text-white relative">
     <div class="container mx-auto px-6 max-w-6xl text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-12 fade-up" data-i18n="why_us">لماذا يختارنا الجميع؟</h2>
@@ -388,6 +447,7 @@
     </div>
   </section>
 
+  <!-- Food Section -->
   <section class="py-20 bg-white relative">
     <div class="container mx-auto px-6 max-w-6xl">
       <div class="flex flex-col lg:flex-row items-center gap-12">
@@ -425,6 +485,7 @@
     </div>
   </section>
 
+  <!-- Testimonials Carousel -->
   <section class="py-20 bg-light border-y border-gray-200">
     <div class="container mx-auto px-6 max-w-4xl text-center relative fade-up">
       <i class="fas fa-quote-right rtl:fa-quote-right ltr:fa-quote-left text-4xl text-gold/30 mb-4"></i>
@@ -445,6 +506,7 @@
     </div>
   </section>
 
+  <!-- FAQ Section -->
   <section class="py-20 bg-white">
     <div class="container mx-auto px-6 max-w-4xl">
       <div class="text-center mb-16 fade-up">
@@ -510,6 +572,7 @@
     </div>
   </section>
 
+  <!-- Lead Form Section -->
   <section id="wa-form" class="py-20 bg-primary relative overflow-hidden text-start">
     <div class="absolute inset-0 bg-moroccan-pattern opacity-10 pointer-events-none"></div>
     <div class="container mx-auto px-6 max-w-4xl relative z-10">
@@ -581,6 +644,7 @@
     </div>
   </section>
 
+  <!-- CTA Section -->
   <section class="py-24 bg-dark text-white text-center relative overflow-hidden">
     <div class="container mx-auto px-6 relative z-10 fade-up">
       <h2 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="cta_title">قرارك اليوم قد يغير حياتك لسنوات</h2>
@@ -593,6 +657,7 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="bg-black text-gray-500 py-8 text-center text-sm border-t border-gray-800">
     <div class="container mx-auto px-6">
       <p data-i18n="footer_rights">&copy; 2026 غذاء وعافية. جميع الحقوق محفوظة.</p>
@@ -647,14 +712,22 @@
         success_desc: "استمع لتجارب حقيقية لأشخاص غيروا حياتهم الصحية معنا",
         story1_name: "فاطمة الزهراء",
         story1_city: "الدار البيضاء",
-        before: "الحالة قبل",
-        after: "النتيجة بعد",
-        story1_before: "خمول ومقاومة إنسولين",
-        story1_after: "صحة ممتازة ونشاط",
         story2_name: "أحمد",
         story2_city: "الرباط",
+        story3_name: "مريم",
+        story3_city: "مراكش",
+        story4_name: "يوسف",
+        story4_city: "أكادير",
+        before: "الحالة قبل:",
+        after: "النتيجة بعد:",
+        story1_before: "خمول ومقاومة إنسولين",
+        story1_after: "صحة ممتازة ونشاط",
         story2_before: "سمنة وصعوبة في الحركة",
         story2_after: "لياقة وثقة بالنفس",
+        story3_before: "وزن زائد وإرهاق",
+        story3_after: "حيوية ولياقة عالية",
+        story4_before: "عادات غذائية سيئة",
+        story4_after: "أسلوب حياة صحي",
         transform_title: "تحولات صحية مذهلة",
         trans1_t: "استعادة الثقة والنشاط",
         trans1_d: "بعد معاناة طويلة مع الخمول والشعور بالتعب المستمر، أصبحت الحركة جزءاً من يومها واستعادت ثقتها بنفسها.",
@@ -768,14 +841,22 @@
         success_desc: "Listen to real experiences of people who changed their healthy lives with us",
         story1_name: "Fatima Ezzahra",
         story1_city: "Casablanca",
-        before: "Before",
-        after: "After",
-        story1_before: "Lethargy & Insulin Resistance",
-        story1_after: "Excellent Health & Activity",
         story2_name: "Ahmed",
         story2_city: "Rabat",
+        story3_name: "Maryam",
+        story3_city: "Marrakech",
+        story4_name: "Youssef",
+        story4_city: "Agadir",
+        before: "Before:",
+        after: "After:",
+        story1_before: "Lethargy & Insulin Resistance",
+        story1_after: "Excellent Health & Activity",
         story2_before: "Obesity & Mobility Issues",
         story2_after: "Fitness & Self-Confidence",
+        story3_before: "Overweight & Fatigue",
+        story3_after: "Vitality & Fitness",
+        story4_before: "Bad Habits",
+        story4_after: "Healthy Lifestyle",
         transform_title: "Amazing Health Transformations",
         trans1_t: "Regained Confidence & Energy",
         trans1_d: "After suffering from lethargy, movement became part of her day and she regained her confidence.",
@@ -889,14 +970,22 @@
         success_desc: "Écoutez de vraies expériences de personnes qui ont changé leur vie avec nous",
         story1_name: "Fatima Ezzahra",
         story1_city: "Casablanca",
-        before: "Avant",
-        after: "Après",
-        story1_before: "Léthargie & Résistance insuline",
-        story1_after: "Excellente santé & Activité",
         story2_name: "Ahmed",
         story2_city: "Rabat",
+        story3_name: "Maryam",
+        story3_city: "Marrakech",
+        story4_name: "Youssef",
+        story4_city: "Agadir",
+        before: "Avant :",
+        after: "Après :",
+        story1_before: "Léthargie & Résistance insuline",
+        story1_after: "Excellente santé & Activité",
         story2_before: "Obésité & Problèmes de mobilité",
         story2_after: "Forme & Confiance en soi",
+        story3_before: "Surpoids & Fatigue",
+        story3_after: "Vitalité & Forme",
+        story4_before: "Mauvaises Habitudes",
+        story4_after: "Mode de Vie Sain",
         transform_title: "Transformations Incroyables",
         trans1_t: "Confiance & Énergie Retrouvées",
         trans1_d: "Après avoir souffert de léthargie, le mouvement fait partie de sa journée et elle a retrouvé confiance.",
@@ -1107,5 +1196,6 @@
   </script>
 </body>
 </html>
+
 
 ```
