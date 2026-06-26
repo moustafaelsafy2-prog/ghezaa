@@ -14,7 +14,6 @@
   <meta property="og:site_name" content="صحة وعافية">
   <meta property="og:locale" content="ar_MA">
 
-  <!-- الوسوم الإضافية المخصصة لإجبار واتساب على قراءة الصورة -->
   <meta itemprop="name" content="صحة وعافية | استعد صحتك وثقتك بنفسك">
   <meta itemprop="description" content="برنامج متكامل يساعدك على خسارة الوزن وتحسين صحتك من خلال المتابعة اليومية والدعم المستمر.">
   <meta itemprop="image" content="https://ghezaa.pages.dev/preview.jpg.png">
@@ -38,16 +37,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YH0NNVWKCP"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-YH0NNVWKCP');
-  </script>
 
   <script>
     tailwind.config = {
@@ -143,6 +132,10 @@
     }
     html[dir="rtl"] .lang-switcher { left: 1.5rem; }
     html[dir="ltr"] .lang-switcher { right: 1.5rem; }
+    
+    html[lang="tzm"] body, html[lang="fr"] body {
+      font-family: system-ui, -apple-system, sans-serif;
+    }
   </style>
 </head>
 <body class="antialiased selection:bg-gold selection:text-white relative">
@@ -151,36 +144,41 @@
   <div class="lang-switcher">
     <select id="langSelector" class="bg-white/90 backdrop-blur border-2 border-gold text-primary rounded-full px-4 py-2 font-bold shadow-lg outline-none cursor-pointer text-sm hover:bg-gold hover:text-white transition-colors">
       <option value="ar" selected>العربية</option>
-      <option value="en">English</option>
+      <option value="tzm">ⵜⴰⵎⴰⵣⵉⵖⵜ</option>
       <option value="fr">Français</option>
     </select>
   </div>
 
   <div class="fixed inset-0 bg-moroccan-pattern pointer-events-none z-[-1]"></div>
   
-  <!-- Hero Section -->
+  <!-- 1. Hero Section -->
   <section class="relative min-h-[90vh] flex items-center justify-center pt-10 pb-20 overflow-hidden bg-gradient-to-br from-primary via-primaryLight to-[#0a2e1f] animate-gradient-xy text-white">
     <div class="absolute inset-0 z-0">
       <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fm=webp&fit=crop&w=2070&q=80" alt="صحة ونشاط" class="w-full h-full object-cover opacity-20 mix-blend-overlay" />
       <div class="absolute inset-0 bg-gradient-to-b from-primary/80 to-primary/95"></div>
     </div>
     <div class="container mx-auto px-6 relative z-10 text-center flex flex-col items-center">
-      <div class="mb-8 inline-block">
-        <span class="text-gold border border-gold/50 bg-gold/10 px-4 py-1.5 rounded-full text-sm font-bold tracking-widest uppercase backdrop-blur-sm" data-i18n="hero_badge">صحة وعافية</span>
+      <div class="mb-8 inline-block fade-up">
+        <span class="text-gold border border-gold/50 bg-gold/10 px-5 py-2 rounded-full text-sm font-bold tracking-widest uppercase backdrop-blur-sm flex items-center gap-2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg" alt="Morocco Flag" class="w-5 h-5 rounded-full object-cover border border-white/20">
+          <span data-i18n="hero_badge">صحة وعافية</span>
+        </span>
       </div>
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight max-w-4xl glow-text drop-shadow-lg" data-i18n="hero_title">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight max-w-4xl glow-text drop-shadow-lg fade-up" style="transition-delay: 100ms;" data-i18n="hero_title">
         استعد صحتك وثقتك بنفسك مع <span class="text-gold">صحة وعافية</span>
       </h1>
-      <p class="text-lg md:text-2xl mb-10 max-w-3xl text-gray-200 leading-relaxed font-light drop-shadow-md" data-i18n="hero_desc">
+      <p class="text-lg md:text-2xl mb-10 max-w-3xl text-gray-200 leading-relaxed font-light drop-shadow-md fade-up" style="transition-delay: 200ms;" data-i18n="hero_desc">
         برنامج متكامل يساعدك على خسارة الوزن وتحسين صحتك من خلال المتابعة اليومية، الدعم المستمر، ومجتمع يساعدك على النجاح.
       </p>
-      <a href="#wa-form" class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-gold to-yellow-500 hover:from-yellow-500 hover:to-gold text-primary font-bold text-xl py-4 px-10 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:shadow-[0_0_30px_rgba(212,175,55,0.6)] transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto">
-        <i class="fab fa-whatsapp text-2xl"></i>
-        <span data-i18n="hero_btn">ابدأ الآن عبر واتساب</span>
-      </a>
-      <p class="mt-4 text-sm text-gray-300 flex items-center justify-center gap-2">
-        <i class="fas fa-lock"></i> <span data-i18n="hero_note">أحصل علي استشارتك</span>
-      </p>
+      <div class="fade-up" style="transition-delay: 300ms;">
+        <a href="#wa-form" class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-gold to-yellow-500 hover:from-yellow-500 hover:to-gold text-primary font-bold text-xl py-4 px-10 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:shadow-[0_0_30px_rgba(212,175,55,0.6)] transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto">
+          <i class="fab fa-whatsapp text-2xl"></i>
+          <span data-i18n="hero_btn">ابدأ الآن عبر واتساب</span>
+        </a>
+        <p class="mt-4 text-sm text-gray-300 flex items-center justify-center gap-2">
+          <i class="fas fa-lock"></i> <span data-i18n="hero_note">أحصل علي استشارتك مجاناً اليوم</span>
+        </p>
+      </div>
     </div>
     <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-[60px] md:h-[100px]">
@@ -191,7 +189,7 @@
     </div>
   </section>
 
-  <!-- Pains Section -->
+  <!-- 2. Pains Section (Empathy) -->
   <section class="py-20 bg-light">
     <div class="container mx-auto px-6 max-w-6xl">
       <div class="text-center mb-16 fade-up">
@@ -233,31 +231,99 @@
     </div>
   </section>
 
-  <!-- Quote Section -->
-  <section class="py-20 bg-white relative overflow-hidden">
+  <!-- 3. Culture & Awareness (The Aha Moment / Root Cause) -->
+  <section class="py-24 bg-white relative border-b border-gray-100">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="flex flex-col lg:flex-row items-center gap-14">
+        <div class="lg:w-1/2 fade-up order-2 lg:order-1">
+          <div class="grid grid-cols-2 gap-4 relative">
+            <div class="absolute -top-6 -end-6 text-6xl text-gold/20"><i class="fas fa-bread-slice"></i></div>
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fm=webp&fit=crop&w=600&q=80" alt="خبز ومعجنات" class="rounded-2xl shadow-lg w-full h-56 object-cover" />
+            <img src="https://images.unsplash.com/photo-1576092762791-dd9e2220afa1?auto=format&fm=webp&fit=crop&w=600&q=80" alt="شاي مغربي" class="rounded-2xl shadow-lg w-full h-56 object-cover mt-8" />
+          </div>
+        </div>
+        <div class="lg:w-1/2 fade-up order-1 lg:order-2">
+          <span class="inline-block py-1 px-3 rounded-full bg-red-100 text-red-600 font-bold text-sm mb-4" data-i18n="culture_badge">السبب الحقيقي لما تعانيه</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6 leading-tight" data-i18n="culture_title">
+            حبنا للأكل.. و <span class="text-red-500">فخ المعجنات</span> 🇲🇦
+          </h2>
+          <p class="text-lg text-gray-700 mb-5 leading-relaxed" data-i18n="culture_p1">
+            الأكل في ثقافتنا المغربية ليس مجرد غاية للبقاء، بل هو لغة حب وتجمع عائلي. رائحة الخبز الطازج، المسمن، والبغرير مع كؤوس الشاي هي ذكريات محفورة في وجداننا جميعاً.
+          </p>
+          <div class="bg-red-50 border-s-4 border-red-500 p-5 rounded-s-lg mb-6">
+            <p class="text-dark font-bold mb-2 flex items-center gap-2"><i class="fas fa-exclamation-triangle text-red-500"></i> <span data-i18n="culture_alert_title">الخطر الصامت</span></p>
+            <p class="text-gray-700 text-sm leading-relaxed" data-i18n="culture_p2">
+              لكن، هذا الاعتماد اليومي والمفرط على الخبز الأبيض والمعجنات تحول إلى <strong>سبب كارثي</strong> لانتشار مخيف لمقاومة الإنسولين، السكري، والسمنة في مجتمعنا. أصبحت هذه العادات الاستهلاكية تسلب منا صحتنا وطاقتنا دون أن نشعر. فشلك في الرجيم ليس ضعف إرادة منك، بل هو إدمان فرضه علينا هذا النظام الغذائي.
+            </p>
+          </div>
+          <p class="text-lg text-gray-700 font-medium" data-i18n="culture_p3">
+            لذلك، تجربتك معنا <strong class="text-primary border-b-2 border-gold">ليست مجرد رحلة لإنقاص الوزن</strong>. إنها رحلة وعي عميقة، نغير فيها نظرتك للأكل لتفهم كيف يقرأ جسمك هذا الطعام، لكي نستعيد صحتنا من جذورها.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Food Section (The Relief / No Deprivation) -->
+  <section class="py-20 bg-light relative">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="lg:w-1/2 fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6 leading-tight" data-i18n="food_title">
+            وبعد هذا الوعي.. لن نطلب منك التخلي عن <span class="text-gold border-b-2 border-gold">الأكل المغربي</span>
+          </h2>
+          <p class="text-xl text-gray-600 mb-6" data-i18n="food_p1">
+            السر ليس في الحرمان التام الذي يجعلك تستسلم سريعاً، بل في الفهم. سنعلمك كيف ومتى تتناول أطباقك المفضلة بذكاء.
+          </p>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-green-500 mt-1 text-xl shrink-0"></i>
+              <div>
+                <strong class="block text-dark" data-i18n="food_i1_t">الطاجين، زعلوك، مشاوي</strong>
+                <span class="text-gray-600 text-sm" data-i18n="food_i1_d">سنعلمك كيف تتناولها بالكميات والطرق الصحية التي تشبعك ولا ترفع سكر الدم.</span>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-green-500 mt-1 text-xl shrink-0"></i>
+              <div>
+                <strong class="block text-dark" data-i18n="food_i2_t">البدائل الصحية للخبز</strong>
+                <span class="text-gray-600 text-sm" data-i18n="food_i2_d">سنوفر لك بدائل ذكية ولذيذة لتستمتع بوجباتك دون تدمير صحتك.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="lg:w-1/2 grid grid-cols-2 gap-4 fade-up">
+          <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fm=webp&fit=crop&w=600&q=80" alt="طاجين مغربي" class="rounded-xl shadow-md w-full h-48 object-cover" />
+          <img src="https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?auto=format&fm=webp&fit=crop&w=600&q=80" alt="سمك" class="rounded-xl shadow-md w-full h-48 object-cover mt-8" />
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fm=webp&fit=crop&w=600&q=80" alt="سلطة" class="rounded-xl shadow-md w-full h-48 object-cover -mt-8" />
+          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fm=webp&fit=crop&w=600&q=80" alt="فطور صحي" class="rounded-xl shadow-md w-full h-48 object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Quote Section (Paradigm Shift) -->
+  <section class="py-20 bg-white relative overflow-hidden border-t border-gray-100">
     <div class="container mx-auto px-6 max-w-4xl text-center fade-up relative z-10">
       <i class="fas fa-quote-right rtl:fa-quote-right ltr:fa-quote-left text-4xl text-gold/50 mb-6"></i>
       <h2 class="text-3xl md:text-5xl font-bold text-primary mb-8 leading-tight" data-i18n="quote_title">
-        أنت لا تحتاج إلى <span class="text-red-500 line-through decoration-2">رجيم جديد</span>.<br />
-        أنت تحتاج إلى <span class="text-gradient">نظام يساعدك على الاستمرار</span>.
+        إذاً أنت لا تحتاج إلى <span class="text-red-500 line-through decoration-2">رجيم قاسي جديد</span>.<br />
+        أنت تحتاج إلى <span class="text-gradient">نظام متكامل يساعدك على الاستمرار</span>.
       </h2>
-      <p class="text-xl text-gray-600 leading-relaxed mb-6" data-i18n="quote_p1">
-        لماذا تفشل معظم محاولات خسارة الوزن؟ المشكلة ليست أنك لا تعرف ماذا تأكل، أو أن إرادتك ضعيفة.
-      </p>
-      <p class="text-2xl text-dark font-bold mb-10 border-e-4 border-gold pe-6 inline-block text-start w-full md:w-auto" data-i18n="quote_p2">
-        المشكلة الحقيقية هي أنك تحاول <span class="text-primary">وحدك</span> في بيئة لا تدعمك.
+      <p class="text-2xl text-dark font-bold mb-10 border-s-4 border-gold ps-6 inline-block text-start w-full md:w-auto" data-i18n="quote_p2">
+        المشكلة الحقيقية أنك كنت تحاول <span class="text-primary">وحدك</span> في بيئة لا تدعمك.
       </p>
       <p class="text-lg text-gray-600 leading-relaxed mb-10" data-i18n="quote_p3">
-        ولهذا السبب تحديداً أسسنا <strong class="text-primary">صحة وعافية</strong>. لنوفر لك البيئة، الخطة، والدعم اليومي الذي يساعدك على الوصول لهدفك وعدم العودة للوراء.
+        ولهذا السبب تحديداً أسسنا <strong class="text-primary">صحة وعافية</strong>. لنوفر لك البيئة، الخطة، والدعم اليومي الذي يخرجك من هذه الدوامة ولا يجعلك تعود للوراء أبداً.
       </p>
     </div>
   </section>
 
-  <!-- How It Works Section -->
+  <!-- 6. How It Works Section (Logic & Roadmap) -->
   <section class="py-20 bg-light">
     <div class="container mx-auto px-6 max-w-6xl">
       <div class="text-center mb-16 fade-up">
-        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4" data-i18n="how_title">كيف يعمل برنامج صحة وعافية؟</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4" data-i18n="how_title">كيف نخرجك من هذه الدوامة؟</h2>
         <div class="h-1 w-24 bg-gold mx-auto rounded-full mb-6"></div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -301,18 +367,31 @@
     </div>
   </section>
 
-  <!-- Success Stories (Instagram Reels) -->
+  <!-- 7. Why Us Section -->
+  <section class="py-20 bg-primaryLight text-white relative">
+    <div class="container mx-auto px-6 max-w-6xl text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 fade-up" data-i18n="why_us">لماذا يثق بنا الجميع؟</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="p-6 bg-primary rounded-xl border border-white/10 fade-up"><i class="fas fa-user-md text-3xl text-gold mb-3"></i><h4 class="font-bold" data-i18n="feat1">خبرة طويلة</h4></div>
+        <div class="p-6 bg-primary rounded-xl border border-white/10 fade-up"><i class="fas fa-mobile-alt text-3xl text-gold mb-3"></i><h4 class="font-bold" data-i18n="feat2">متابعة يومية</h4></div>
+        <div class="p-6 bg-primary rounded-xl border border-white/10 fade-up"><i class="fas fa-users text-3xl text-gold mb-3"></i><h4 class="font-bold" data-i18n="feat3">مجتمع داعم</h4></div>
+        <div class="p-6 bg-primary rounded-xl border border-white/10 fade-up"><i class="fas fa-headset text-3xl text-gold mb-3"></i><h4 class="font-bold" data-i18n="feat4">دعم مستمر</h4></div>
+        <div class="p-6 bg-primary rounded-xl border border-white/10 fade-up"><i class="fas fa-certificate text-3xl text-gold mb-3"></i><h4 class="font-bold" data-i18n="feat5">نتائج مثبتة</h4></div>
+        <div class="p-6 bg-primary rounded-xl border border-white/10 fade-up"><i class="fas fa-leaf text-3xl text-gold mb-3"></i><h4 class="font-bold" data-i18n="feat6">حلول تناسبك</h4></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Social Proof: Success Stories (Instagram Reels) -->
   <section class="py-20 bg-primary text-white relative">
     <div class="container mx-auto px-6 max-w-7xl">
       <div class="text-center mb-16 fade-up">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="success_title">قصص نجاح من الواقع</h2>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="success_title">أبطال كسروا الدوامة</h2>
         <div class="h-1 w-24 bg-gold mx-auto rounded-full mb-6"></div>
-        <p class="text-gray-300 text-lg" data-i18n="success_desc">استمع لتجارب حقيقية لأشخاص غيروا حياتهم الصحية معنا</p>
+        <p class="text-gray-300 text-lg" data-i18n="success_desc">استمع لتجارب حقيقية لأشخاص غيروا حياتهم الصحية معنا للأبد</p>
       </div>
       
-      <!-- 4 Columns Grid for Instagram Reels -->
       <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-        
         <!-- Story 1 -->
         <div class="bg-primaryLight rounded-2xl overflow-hidden shadow-2xl fade-up flex flex-col transform transition-transform hover:-translate-y-2 duration-300">
           <div class="w-full bg-white relative">
@@ -376,7 +455,7 @@
               </div>
               <div class="flex justify-between items-center pt-1">
                 <span class="text-gray-400 text-xs" data-i18n="after">النتيجة بعد:</span>
-                <span class="font-bold text-green-400 text-end" data-i18n="story3_after">حيويةوشفاء </span>
+                <span class="font-bold text-green-400 text-end" data-i18n="story3_after">حيوية وشفاء</span>
               </div>
             </div>
           </div>
@@ -409,8 +488,8 @@
     </div>
   </section>
 
-  <!-- Transform Section -->
-  <section class="py-24 bg-white border-t border-gray-100">
+  <!-- 9. Social Proof: Transform Section -->
+  <section class="py-24 bg-white">
     <div class="container mx-auto px-6 max-w-6xl">
       <div class="text-center mb-16 fade-up">
         <h2 class="text-3xl md:text-5xl font-bold text-primary mb-4" data-i18n="transform_title">تحولات صحية مذهلة</h2>
@@ -445,66 +524,13 @@
     </div>
   </section>
 
-  <!-- Why Us Section -->
-  <section class="py-20 bg-primaryLight text-white relative">
-    <div class="container mx-auto px-6 max-w-6xl text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-12 fade-up" data-i18n="why_us">لماذا يختارنا الجميع؟</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-        <div class="p-6 bg-primary rounded-xl border border-white/10 fade-up"><i class="fas fa-user-md text-3xl text-gold mb-3"></i><h4 class="font-bold" data-i18n="feat1">خبرة طويلة</h4></div>
-        <div class="p-6 bg-primary rounded-xl border border-white/10 fade-up"><i class="fas fa-mobile-alt text-3xl text-gold mb-3"></i><h4 class="font-bold" data-i18n="feat2">متابعة يومية</h4></div>
-        <div class="p-6 bg-primary rounded-xl border border-white/10 fade-up"><i class="fas fa-users text-3xl text-gold mb-3"></i><h4 class="font-bold" data-i18n="feat3">مجتمع داعم</h4></div>
-        <div class="p-6 bg-primary rounded-xl border border-white/10 fade-up"><i class="fas fa-headset text-3xl text-gold mb-3"></i><h4 class="font-bold" data-i18n="feat4">دعم مستمر</h4></div>
-        <div class="p-6 bg-primary rounded-xl border border-white/10 fade-up"><i class="fas fa-certificate text-3xl text-gold mb-3"></i><h4 class="font-bold" data-i18n="feat5">قصص نجاح</h4></div>
-        <div class="p-6 bg-primary rounded-xl border border-white/10 fade-up"><i class="fas fa-leaf text-3xl text-gold mb-3"></i><h4 class="font-bold" data-i18n="feat6">حلول تناسبك</h4></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Food Section -->
-  <section class="py-20 bg-white relative">
-    <div class="container mx-auto px-6 max-w-6xl">
-      <div class="flex flex-col lg:flex-row items-center gap-12">
-        <div class="lg:w-1/2 fade-up">
-          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6 leading-tight" data-i18n="food_title">
-            لن نطلب منك التخلي عن <span class="text-gold border-b-2 border-gold">الأكل المغربي</span> الأصيل
-          </h2>
-          <p class="text-xl text-gray-600 mb-6" data-i18n="food_p1">
-            السر ليس في الحرمان، بل في معرفة كيف ومتى تتناول أطباقك المفضلة.
-          </p>
-          <ul class="space-y-4 mb-8">
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check-circle text-green-500 mt-1 text-xl shrink-0"></i>
-              <div>
-                <strong class="block text-dark" data-i18n="food_i1_t">الطاجين، زعلوك، مشاوي</strong>
-                <span class="text-gray-600 text-sm" data-i18n="food_i1_d">سنعلمك كيف تتناولها بالكميات والطرق الصحية.</span>
-              </div>
-            </li>
-            <li class="flex items-start gap-3">
-              <i class="fas fa-check-circle text-green-500 mt-1 text-xl shrink-0"></i>
-              <div>
-                <strong class="block text-dark" data-i18n="food_i2_t">الفطور المغربي</strong>
-                <span class="text-gray-600 text-sm" data-i18n="food_i2_d">بدائل ذكية لتستمتع بصباحك الصحي.</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="lg:w-1/2 grid grid-cols-2 gap-4 fade-up">
-          <img src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fm=webp&fit=crop&w=600&q=80" alt="طاجين مغربي" class="rounded-xl shadow-md w-full h-48 object-cover" />
-          <img src="https://images.unsplash.com/photo-1580476262798-bddd9f4b7369?auto=format&fm=webp&fit=crop&w=600&q=80" alt="سمك" class="rounded-xl shadow-md w-full h-48 object-cover mt-8" />
-          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fm=webp&fit=crop&w=600&q=80" alt="سلطة" class="rounded-xl shadow-md w-full h-48 object-cover -mt-8" />
-          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fm=webp&fit=crop&w=600&q=80" alt="فطور صحي" class="rounded-xl shadow-md w-full h-48 object-cover" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Carousel -->
+  <!-- 10. Social Proof: Testimonials Carousel -->
   <section class="py-20 bg-light border-y border-gray-200">
     <div class="container mx-auto px-6 max-w-4xl text-center relative fade-up">
       <i class="fas fa-quote-right rtl:fa-quote-right ltr:fa-quote-left text-4xl text-gold/30 mb-4"></i>
       <div id="testimonials" class="relative min-h-[150px]">
         <div class="carousel-item active">
-          <p class="text-xl md:text-2xl text-gray-700 italic mb-6 leading-relaxed" data-i18n="test1_d">"لم أكن أتخيل أنني سأتمكن من تغيير حياتي بهذا الشكل دون أن أشعر بالجوع. الدعم اليومي كان هو الفارق الحقيقي بالنسبة لي."</p>
+          <p class="text-xl md:text-2xl text-gray-700 italic mb-6 leading-relaxed" data-i18n="test1_d">"تغيرت نظرتي للخبز تماماً. لم أكن أتخيل أنني سأتمكن من تغيير حياتي بهذا الشكل دون أن أشعر بالجوع. الدعم اليومي كان هو الفارق الحقيقي."</p>
           <h4 class="font-bold text-primary text-lg" data-i18n="test1_n">سناء - مراكش</h4>
         </div>
         <div class="carousel-item">
@@ -519,7 +545,7 @@
     </div>
   </section>
 
-  <!-- FAQ Section -->
+  <!-- 11. FAQ Section (Objection Handling) -->
   <section class="py-20 bg-white">
     <div class="container mx-auto px-6 max-w-4xl">
       <div class="text-center mb-16 fade-up">
@@ -533,7 +559,7 @@
             <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
           </button>
           <div class="accordion-content bg-white">
-            <p class="px-6 pb-4 text-gray-600 text-start" data-i18n="a1">البرنامج مصمم ليقدم وجبات مشبعة ومغذية تناسب حالتك.</p>
+            <p class="px-6 pb-4 text-gray-600 text-start" data-i18n="a1">البرنامج مصمم ليقدم وجبات مشبعة ومغذية تناسب حالتك وتمنع ارتفاع الإنسولين المسبب للجوع.</p>
           </div>
         </div>
         <div class="border border-gray-200 rounded-xl overflow-hidden bg-light">
@@ -547,11 +573,11 @@
         </div>
         <div class="border border-gray-200 rounded-xl overflow-hidden bg-light">
           <button type="button" class="faq-btn w-full px-6 py-4 flex justify-between items-center focus:outline-none text-start">
-            <span class="font-bold text-lg text-dark" data-i18n="q3">هل يناسب الرجال والنساء؟</span>
+            <span class="font-bold text-lg text-dark" data-i18n="q3">هل سأمتنع عن الخبز تماماً؟</span>
             <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
           </button>
           <div class="accordion-content bg-white">
-            <p class="px-6 pb-4 text-gray-600 text-start" data-i18n="a3">نعم، يتم تفصيل الخطة لتناسب طبيعة كل جسم وهدف كل شخص.</p>
+            <p class="px-6 pb-4 text-gray-600 text-start" data-i18n="a3">لا، ولكن سنعلمك كيف تختار البدائل الصحية ومتى وكيف تتناوله لكي لا يضر بصحتك.</p>
           </div>
         </div>
         <div class="border border-gray-200 rounded-xl overflow-hidden bg-light">
@@ -561,15 +587,6 @@
           </button>
           <div class="accordion-content bg-white">
             <p class="px-6 pb-4 text-gray-600 text-start" data-i18n="a4">نعم، نتواصل معك يومياً عبر الواتساب للتوجيه والإجابة على الاستفسارات.</p>
-          </div>
-        </div>
-        <div class="border border-gray-200 rounded-xl overflow-hidden bg-light">
-          <button type="button" class="faq-btn w-full px-6 py-4 flex justify-between items-center focus:outline-none text-start">
-            <span class="font-bold text-lg text-dark" data-i18n="q5">هل يوجد مجتمع دعم؟</span>
-            <i class="fas fa-chevron-down text-gold transition-transform duration-300"></i>
-          </button>
-          <div class="accordion-content bg-white">
-            <p class="px-6 pb-4 text-gray-600 text-start" data-i18n="a5">نعم، ستنضم لمجموعة مخصصة للمشتركين لتبادل التشجيع والخبرات.</p>
           </div>
         </div>
         <div class="border border-gray-200 rounded-xl overflow-hidden bg-light">
@@ -585,13 +602,13 @@
     </div>
   </section>
 
-  <!-- Lead Form Section -->
+  <!-- 12. Lead Form Section (Action) -->
   <section id="wa-form" class="py-20 bg-primary relative overflow-hidden text-start">
     <div class="absolute inset-0 bg-moroccan-pattern opacity-10 pointer-events-none"></div>
     <div class="container mx-auto px-6 max-w-4xl relative z-10">
       <div class="glass-card rounded-3xl p-8 md:p-12 shadow-2xl fade-up">
         <div class="text-center mb-10">
-          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4" data-i18n="form_title">خطوتك الأولى نحو التغيير</h2>
+          <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4" data-i18n="form_title">خطوتك الأولى نحو التغيير والوعي</h2>
           <p class="text-gray-600" data-i18n="form_desc">أدخل بياناتك الأساسية وسنتواصل معك لتقييم حالتك.</p>
         </div>
         <form id="leadForm" class="space-y-6 text-start">
@@ -618,8 +635,8 @@
             <select id="wa-goal" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-transparent focus:ring-2 focus:ring-gold outline-none bg-white/80 text-dark text-start transition-all duration-300 cursor-pointer">
               <option value="" disabled selected data-i18n="opt_goal_0">اختر هدفك...</option>
               <option value="opt_goal_1" data-i18n="opt_goal_1">تحسين الصحة العامة والنشاط</option>
-              <option value="opt_goal_2" data-i18n="opt_goal_2">التخلص من السمنة</option>
-              <option value="opt_goal_3" data-i18n="opt_goal_3">تعلم أسلوب حياة صحي</option>
+              <option value="opt_goal_2" data-i18n="opt_goal_2">التخلص من السمنة ومقاومة الإنسولين</option>
+              <option value="opt_goal_3" data-i18n="opt_goal_3">تغيير العادات وتعلم أسلوب حياة صحي</option>
             </select>
           </div>
           <div>
@@ -638,8 +655,8 @@
             <label class="block text-sm font-bold text-primary mb-2 text-start" for="wa-mainReason" data-i18n="lbl_main_reason">ما هو السبب الرئيسي الذي دفعك للتواصل معنا اليوم؟</label>
             <select id="wa-mainReason" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-transparent focus:ring-2 focus:ring-gold outline-none bg-white/80 text-dark text-start transition-all duration-300 cursor-pointer">
               <option value="" disabled selected data-i18n="opt_reason_0">اختر السبب الرئيسي...</option>
-              <option value="1" data-i18n="opt_reason_1">أريد خسارة الوزن</option>
-              <option value="2" data-i18n="opt_reason_2">أريد تحسين صحتي بشكل عام</option>
+              <option value="1" data-i18n="opt_reason_1">أريد خسارة الوزن بطريقة واعية</option>
+              <option value="2" data-i18n="opt_reason_2">أريد التخلص من إدمان الخبز والمعجنات</option>
               <option value="3" data-i18n="opt_reason_3">أريد تحسين شكلي وثقتي بنفسي</option>
               <option value="4" data-i18n="opt_reason_4">أشعر بالخمول وقلة الطاقة</option>
               <option value="5" data-i18n="opt_reason_5">نصحني الطبيب بالبدء</option>
@@ -657,12 +674,12 @@
     </div>
   </section>
 
-  <!-- CTA Section -->
+  <!-- 13. CTA Footer (Final Push) -->
   <section class="py-24 bg-dark text-white text-center relative overflow-hidden">
     <div class="container mx-auto px-6 relative z-10 fade-up">
       <h2 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="cta_title">قرارك اليوم قد يغير حياتك لسنوات</h2>
       <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto" data-i18n="cta_desc">
-        لا تؤجل صحتك. كل يوم يمر هو فرصة ضائعة لتشعر بطاقة أكبر وصحة أفضل. فريقنا بانتظارك.
+        لا تؤجل صحتك. كل يوم يمر هو فرصة ضائعة لتشعر بطاقة أكبر وصحة أفضل. فريقنا بانتظارك لتبدأ رحلة الوعي.
       </p>
       <a href="#wa-form" class="inline-flex items-center justify-center bg-gold hover:bg-goldHover text-primary font-bold text-xl py-4 px-12 rounded-full shadow-2xl transition-all transform hover:scale-105" data-i18n="cta_btn">
         تواصل معنا الآن
@@ -670,7 +687,7 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- 14. Footer -->
   <footer class="bg-black text-gray-500 py-8 text-center text-sm border-t border-gray-800">
     <div class="container mx-auto px-6">
       <p data-i18n="footer_rights">&copy; 2026 صحة وعافية. جميع الحقوق محفوظة.</p>
@@ -690,7 +707,7 @@
         hero_title: "استعد صحتك وثقتك بنفسك مع <span class='text-gold'>صحة وعافية</span>",
         hero_desc: "برنامج متكامل يساعدك على خسارة الوزن وتحسين صحتك من خلال المتابعة اليومية، الدعم المستمر، ومجتمع يساعدك على النجاح.",
         hero_btn: "ابدأ الآن عبر واتساب",
-        hero_note: "أحصل علي استشارتك",
+        hero_note: "أحصل علي استشارتك مجاناً اليوم",
         pain_title: "هل هذا يصف حالتك الآن؟",
         pain1_t: "محاولات فاشلة",
         pain1_d: "جربت أنظمة كثيرة، تخسر الوزن ثم تعود لاكتسابه من جديد لأنك لم تستطع الاستمرار.",
@@ -704,11 +721,22 @@
         pain5_d: "تريد بصدق تحسين صحتك وحياتك، لكنك لا تعرف من أين تبدأ أو ما هو الطريق الصحيح.",
         pain6_t: "تحتاج إلى دعم",
         pain6_d: "تعلم أنك تستطيع النجاح إذا وجدت من يوجهك يومياً، ويصحح أخطاءك، ويدعمك نفسياً.",
-        quote_title: "أنت لا تحتاج إلى <span class='text-red-500 line-through decoration-2'>رجيم جديد</span>.<br />أنت تحتاج إلى <span class='text-gradient'>نظام يساعدك على الاستمرار</span>.",
-        quote_p1: "لماذا تفشل معظم محاولات خسارة الوزن؟ المشكلة ليست أنك لا تعرف ماذا تأكل، أو أن إرادتك ضعيفة.",
-        quote_p2: "المشكلة الحقيقية هي أنك تحاول <span class='text-primary'>وحدك</span> في بيئة لا تدعمك.",
-        quote_p3: "ولهذا السبب تحديداً أسسنا <strong class='text-primary'>صحة وعافية</strong>. لنوفر لك البيئة، الخطة، والدعم اليومي الذي يساعدك على الوصول لهدفك وعدم العودة للوراء.",
-        how_title: "كيف يعمل برنامج صحة وعافية؟",
+        culture_badge: "السبب الحقيقي لما تعانيه",
+        culture_title: "حبنا للأكل.. و <span class='text-red-500'>فخ المعجنات</span> 🇲🇦",
+        culture_p1: "الأكل في ثقافتنا المغربية ليس مجرد غاية للبقاء، بل هو لغة حب وتجمع عائلي. رائحة الخبز الطازج، المسمن، والبغرير مع كؤوس الشاي هي ذكريات محفورة في وجداننا جميعاً.",
+        culture_alert_title: "الخطر الصامت",
+        culture_p2: "لكن، هذا الاعتماد اليومي والمفرط على الخبز الأبيض والمعجنات تحول إلى <strong>سبب كارثي</strong> لانتشار مخيف لمقاومة الإنسولين، السكري، والسمنة في مجتمعنا. أصبحت هذه العادات الاستهلاكية تسلب منا صحتنا وطاقتنا دون أن نشعر. فشلك في الرجيم ليس ضعف إرادة منك، بل هو إدمان فرضه علينا هذا النظام الغذائي.",
+        culture_p3: "لذلك، تجربتك معنا <strong class='text-primary border-b-2 border-gold'>ليست مجرد رحلة لإنقاص الوزن</strong>. إنها رحلة وعي عميقة، نغير فيها نظرتك للأكل لتفهم كيف يقرأ جسمك هذا الطعام، لكي نستعيد صحتنا من جذورها.",
+        food_title: "وبعد هذا الوعي.. لن نطلب منك التخلي عن <span class='text-gold border-b-2 border-gold'>الأكل المغربي</span>",
+        food_p1: "السر ليس في الحرمان التام الذي يجعلك تستسلم سريعاً، بل في الفهم. سنعلمك كيف ومتى تتناول أطباقك المفضلة بذكاء.",
+        food_i1_t: "الطاجين، زعلوك، مشاوي",
+        food_i1_d: "سنعلمك كيف تتناولها بالكميات والطرق الصحية التي تشبعك ولا ترفع سكر الدم.",
+        food_i2_t: "البدائل الصحية للخبز",
+        food_i2_d: "سنوفر لك بدائل ذكية ولذيذة لتستمتع بوجباتك دون تدمير صحتك.",
+        quote_title: "إذاً أنت لا تحتاج إلى <span class='text-red-500 line-through decoration-2'>رجيم قاسي جديد</span>.<br />أنت تحتاج إلى <span class='text-gradient'>نظام متكامل يساعدك على الاستمرار</span>.",
+        quote_p2: "المشكلة الحقيقية أنك كنت تحاول <span class='text-primary'>وحدك</span> في بيئة لا تدعمك.",
+        quote_p3: "ولهذا السبب تحديداً أسسنا <strong class='text-primary'>صحة وعافية</strong>. لنوفر لك البيئة، الخطة، والدعم اليومي الذي يخرجك من هذه الدوامة ولا يجعلك تعود للوراء أبداً.",
+        how_title: "كيف نخرجك من هذه الدوامة؟",
         how1_t: "تقييم الحالة",
         how1_d: "ندرس وضعك الصحي، أهدافك، وطبيعة حياتك اليومية بدقة تامة.",
         how2_t: "خطة مناسبة لك",
@@ -721,15 +749,22 @@
         how5_d: "تحديثات أسبوعية للقياسات وتعديل الخطة بناءً على استجابة جسمك.",
         how6_t: "نتائج مستدامة",
         how6_d: "تعلم أسلوب حياة يساعدك على الحفاظ على صحتك ونشاطك.",
-        success_title: "قصص نجاح من الواقع",
-        success_desc: "استمع لتجارب حقيقية لأشخاص غيروا حياتهم الصحية معنا",
+        why_us: "لماذا يثق بنا الجميع؟",
+        feat1: "خبرة طويلة",
+        feat2: "متابعة يومية",
+        feat3: "مجتمع داعم",
+        feat4: "دعم مستمر",
+        feat5: "نتائج مثبتة",
+        feat6: "حلول تناسبك",
+        success_title: "أبطال كسروا الدوامة",
+        success_desc: "استمع لتجارب حقيقية لأشخاص غيروا حياتهم الصحية معنا للأبد",
         story1_name: "فاطمة الزهراء",
         story1_city: "الدار البيضاء",
         story2_name: "أحمد",
         story2_city: "الرباط",
         story3_name: "مريم",
         story3_city: "مراكش",
-        story4_name: "يوسف",
+        story4_name: "خديجة",
         story4_city: "أكادير",
         before: "الحالة قبل:",
         after: "النتيجة بعد:",
@@ -737,9 +772,9 @@
         story1_after: "صحة ممتازة ونشاط",
         story2_before: "سمنة وصعوبة في الحركة",
         story2_after: "لياقة وثقة بالنفس",
-        story3_before: "وزن زائد وإرهاق",
-        story3_after: "حيوية ولياقة عالية",
-        story4_before: "عادات غذائية سيئة",
+        story3_before: "وزن زائد وغدة",
+        story3_after: "حيوية وشفاء",
+        story4_before: "عادات سيئة",
         story4_after: "أسلوب حياة صحي",
         transform_title: "تحولات صحية مذهلة",
         trans1_t: "استعادة الثقة والنشاط",
@@ -748,37 +783,22 @@
         trans2_d: "تغيير جذري في نمط الحياة، تحسنت العادات الغذائية، وتحسنت المؤشرات الصحية بشكل ملحوظ.",
         trans3_t: "حيوية ولياقة عالية",
         trans3_d: "رحلة نجاح تكللت بتقليل مشاكل السمنة المزعجة وعودة الحيوية والطاقة للمهام اليومية.",
-        why_us: "لماذا يختارنا الجميع؟",
-        feat1: "خبرة طويلة",
-        feat2: "متابعة يومية",
-        feat3: "مجتمع داعم",
-        feat4: "دعم مستمر",
-        feat5: "قصص نجاح",
-        feat6: "حلول تناسبك",
-        food_title: "لن نطلب منك التخلي عن <span class='text-gold border-b-2 border-gold'>الأكل المغربي</span> الأصيل",
-        food_p1: "السر ليس في الحرمان، بل في معرفة كيف ومتى تتناول أطباقك المفضلة.",
-        food_i1_t: "الطاجين، زعلوك، مشاوي",
-        food_i1_d: "سنعلمك كيف تتناولها بالكميات والطرق الصحية.",
-        food_i2_t: "الفطور المغربي",
-        food_i2_d: "بدائل ذكية لتستمتع بصباحك الصحي.",
-        test1_d: "\"لم أكن أتخيل أنني سأتمكن من تغيير حياتي بهذا الشكل دون أن أشعر بالجوع. الدعم اليومي كان هو الفارق الحقيقي بالنسبة لي.\"",
+        test1_d: "\"تغيرت نظرتي للخبز تماماً. لم أكن أتخيل أنني سأتمكن من تغيير حياتي بهذا الشكل دون أن أشعر بالجوع. الدعم اليومي كان هو الفارق الحقيقي.\"",
         test1_n: "سناء - مراكش",
         test2_d: "\"كنت أعاني من التعب المستمر بسبب مقاومة الإنسولين. مع صحة وعافية، استعدت نشاطي بالكامل والحمد لله.\"",
         test2_n: "ياسين - طنجة",
         faq_title: "الأسئلة الشائعة",
         q1: "هل سأشعر بالجوع؟",
-        a1: "البرنامج مصمم ليقدم وجبات مشبعة ومغذية تناسب حالتك.",
+        a1: "البرنامج مصمم ليقدم وجبات مشبعة ومغذية تناسب حالتك وتمنع ارتفاع الإنسولين المسبب للجوع.",
         q2: "هل يناسب مرضى السكري؟",
         a2: "يتم التعامل مع كل حالة حسب وضعها الصحي، ويجب استشارة الطبيب عند وجود سكري أو أدوية مستمرة.",
-        q3: "هل يناسب الرجال والنساء؟",
-        a3: "نعم، يتم تفصيل الخطة لتناسب طبيعة كل جسم وهدف كل شخص.",
+        q3: "هل سأمتنع عن الخبز تماماً؟",
+        a3: "لا، ولكن سنعلمك كيف تختار البدائل الصحية ومتى وكيف تتناوله لكي لا يضر بصحتك.",
         q4: "هل توجد متابعة يومية؟",
         a4: "نعم، نتواصل معك يومياً عبر الواتساب للتوجيه والإجابة على الاستفسارات.",
-        q5: "هل يوجد مجتمع دعم؟",
-        a5: "نعم، ستنضم لمجموعة مخصصة للمشتركين لتبادل التشجيع والخبرات.",
         q6: "كيف أبدأ؟",
         a6: "قم بتعبئة النموذج بالأسفل وسيتم تحويلك للواتساب للتواصل معنا.",
-        form_title: "خطوتك الأولى نحو التغيير",
+        form_title: "خطوتك الأولى نحو التغيير والوعي",
         form_desc: "أدخل بياناتك الأساسية وسنتواصل معك لتقييم حالتك.",
         lbl_name: "الاسم الكريم",
         lbl_age: "العمر",
@@ -787,8 +807,8 @@
         lbl_goal: "ما هو هدفك الرئيسي؟",
         opt_goal_0: "اختر هدفك...",
         opt_goal_1: "تحسين الصحة العامة والنشاط",
-        opt_goal_2: "التخلص من السمنة",
-        opt_goal_3: "تعلم أسلوب حياة صحي",
+        opt_goal_2: "التخلص من السمنة ومقاومة الإنسولين",
+        opt_goal_3: "تغيير العادات وتعلم أسلوب حياة صحي",
         lbl_health: "هل تعاني من أي مشاكل صحية؟",
         opt_health_0: "اختر الحالة...",
         opt_health_1: "لا أعاني من أي مشكلة صحية",
@@ -799,8 +819,8 @@
         opt_health_6: "أخرى",
         lbl_main_reason: "ما هو السبب الرئيسي الذي دفعك للتواصل معنا اليوم؟",
         opt_reason_0: "اختر السبب الرئيسي...",
-        opt_reason_1: "أريد خسارة الوزن",
-        opt_reason_2: "أريد تحسين صحتي بشكل عام",
+        opt_reason_1: "أريد خسارة الوزن بطريقة واعية",
+        opt_reason_2: "أريد التخلص من إدمان الخبز والمعجنات",
         opt_reason_3: "أريد تحسين شكلي وثقتي بنفسي",
         opt_reason_4: "أشعر بالخمول وقلة الطاقة",
         opt_reason_5: "نصحني الطبيب بالبدء",
@@ -808,139 +828,142 @@
         opt_reason_7: "سبب آخر",
         btn_submit: "أرسل بياناتك الآن",
         cta_title: "قرارك اليوم قد يغير حياتك لسنوات",
-        cta_desc: "لا تؤجل صحتك. كل يوم يمر هو فرصة ضائعة لتشعر بطاقة أكبر وصحة أفضل. فريقنا بانتظارك.",
+        cta_desc: "لا تؤجل صحتك. كل يوم يمر هو فرصة ضائعة لتشعر بطاقة أكبر وصحة أفضل. فريقنا بانتظارك لتبدأ رحلة الوعي.",
         cta_btn: "تواصل معنا الآن",
         footer_rights: "© 2026 صحة وعافية. جميع الحقوق محفوظة.",
         wa_template: "مرحباً فريق صحة وعافية،\n\nأريد تقييم حالتي للانضمام للبرنامج.\n\n👤 الاسم:\n{name}\n\n📅 العمر:\n{age} سنة\n\n📍 المدينة:\n{city}\n\n⚖️ الوزن:\n{weight} كجم\n\n🎯 الهدف:\n{goal}\n\n🩺 الحالة الصحية:\n{health}\n\n⭐ سبب التواصل:\n{mainReason}\n\nأنتظر ردكم،\n\nشكراً."
       },
-      en: {
-        page_title: "Seha W Afya | Regain Your Health & Confidence",
-        hero_badge: "Seha W Afya",
-        hero_title: "Regain your health and confidence with <span class='text-gold'>Seha W Afya</span>",
-        hero_desc: "An integrated program to help you lose weight and improve health through daily follow-ups, continuous support, and a community for success.",
-        hero_btn: "Start Now via WhatsApp",
-        hero_note: "Get your consultation",
-        pain_title: "Does this describe you right now?",
-        pain1_t: "Failed Attempts",
-        pain1_d: "Tried many diets, lost weight, then gained it back because you couldn't keep up.",
-        pain2_t: "Constant Fatigue",
-        pain2_d: "Waking up tired, losing energy mid-day, preventing you from enjoying life.",
-        pain3_t: "Fear of Complications",
-        pain3_d: "Worried about diabetes, fatty liver, insulin resistance, and the impact of weight.",
-        pain4_t: "Loss of Confidence",
-        pain4_d: "Avoiding social events and struggling to find clothes that fit and please you.",
-        pain5_t: "Desire for Change",
-        pain5_d: "Truly wanting to improve your health, but not knowing where or how to start.",
-        pain6_t: "Need for Support",
-        pain6_d: "Knowing you can succeed if someone guides you daily, corrects mistakes, and supports you.",
-        quote_title: "You don't need a <span class='text-red-500 line-through decoration-2'>new diet</span>.<br />You need a <span class='text-gradient'>system that helps you stay consistent</span>.",
-        quote_p1: "Why do most weight loss attempts fail? The problem isn't your lack of knowledge or weak willpower.",
-        quote_p2: "The real problem is trying <span class='text-primary'>alone</span> in an unsupportive environment.",
-        quote_p3: "That's exactly why we founded <strong class='text-primary'>Seha W Afya</strong>. To provide you with the environment, plan, and daily support to reach your goal and never go back.",
-        how_title: "How does Seha W Afya work?",
-        how1_t: "Assessment",
-        how1_d: "We study your health condition, goals, and daily lifestyle with total accuracy.",
-        how2_t: "Custom Plan",
-        how2_d: "We design a diet combining Moroccan food you love without harsh deprivation.",
-        how3_t: "Daily Follow-up",
-        how3_d: "Daily communication via WhatsApp to correct errors, answer questions, and motivate.",
-        how4_t: "Supportive Community",
-        how4_d: "Join a group of people going through the same experience to share expertise.",
-        how5_t: "Progress Tracking",
-        how5_d: "Weekly updates for measurements and plan adjustments based on your body.",
-        how6_t: "Sustainable Results",
-        how6_d: "Learn a lifestyle that helps you maintain your health and vitality forever.",
-        success_title: "Real Life Success Stories",
-        success_desc: "Listen to real experiences of people who changed their healthy lives with us",
-        story1_name: "Fatima Ezzahra",
-        story1_city: "Casablanca",
-        story2_name: "Ahmed",
-        story2_city: "Rabat",
-        story3_name: "Maryam",
-        story3_city: "Marrakech",
-        story4_name: "Youssef",
-        story4_city: "Agadir",
-        before: "Before:",
-        after: "After:",
-        story1_before: "Lethargy & Insulin Resistance",
-        story1_after: "Excellent Health & Activity",
-        story2_before: "Obesity & Mobility Issues",
-        story2_after: "Fitness & Self-Confidence",
-        story3_before: "Overweight & Fatigue",
-        story3_after: "Vitality & Fitness",
-        story4_before: "Bad Habits",
-        story4_after: "Healthy Lifestyle",
-        transform_title: "Amazing Health Transformations",
-        trans1_t: "Regained Confidence & Energy",
-        trans1_d: "After suffering from lethargy, movement became part of her day and she regained her confidence.",
-        trans2_t: "Overcame Insulin Resistance",
-        trans2_d: "A radical lifestyle change, improved dietary habits, and significantly better health markers.",
-        trans3_t: "High Vitality & Fitness",
-        trans3_d: "A success journey crowned by reducing annoying obesity problems and returning vitality.",
-        why_us: "Why does everyone choose us?",
-        feat1: "Long Experience",
-        feat2: "Daily Follow-up",
-        feat3: "Support Community",
-        feat4: "Continuous Support",
-        feat5: "Success Stories",
-        feat6: "Tailored Solutions",
-        food_title: "We won't ask you to give up authentic <span class='text-gold border-b-2 border-gold'>Moroccan Food</span>",
-        food_p1: "The secret is not deprivation, but knowing how and when to eat your favorite dishes.",
-        food_i1_t: "Tagine, Zaalouk, Grills",
-        food_i1_d: "We will teach you how to eat them in healthy ways and portions.",
-        food_i2_t: "Moroccan Breakfast",
-        food_i2_d: "Smart alternatives to enjoy your healthy morning.",
-        test1_d: "\"I never imagined I could change my life like this without feeling hungry. The daily support was the real difference for me.\"",
-        test1_n: "Sanaa - Marrakech",
-        test2_d: "\"I was suffering from constant fatigue due to insulin resistance. With Seha W Afya, I regained my full energy, thank God.\"",
-        test2_n: "Yassine - Tangier",
-        faq_title: "Frequently Asked Questions",
-        q1: "Will I feel hungry?",
-        a1: "The program is designed to provide fulfilling and nutritious meals tailored to you.",
-        q2: "Is it suitable for diabetics?",
-        a2: "Each case is handled according to its health status. A doctor should be consulted for diabetes or ongoing medications.",
-        q3: "Is it suitable for men and women?",
-        a3: "Yes, the plan is customized to suit the nature of each body and person's goal.",
-        q4: "Is there daily follow-up?",
-        a4: "Yes, we communicate with you daily via WhatsApp for guidance and answering queries.",
-        q5: "Is there a support community?",
-        a5: "Yes, you will join a dedicated group for subscribers to exchange encouragement.",
-        q6: "How do I start?",
-        a6: "Fill out the form below and you will be redirected to WhatsApp to contact us.",
-        form_title: "Your First Step Towards Change",
-        form_desc: "Enter your basic details and we will contact you to evaluate your case.",
-        lbl_name: "Full Name",
-        lbl_age: "Age",
-        lbl_city: "City",
-        lbl_weight: "Current Weight",
-        lbl_goal: "What is your main goal?",
-        opt_goal_0: "Choose your goal...",
-        opt_goal_1: "Improve general health & activity",
-        opt_goal_2: "Get rid of obesity",
-        opt_goal_3: "Learn a healthy lifestyle",
-        lbl_health: "Do you suffer from any health issues?",
-        opt_health_0: "Choose condition...",
-        opt_health_1: "No, I don't suffer from any health issues",
-        opt_health_2: "Diabetes",
-        opt_health_3: "Insulin Resistance",
-        opt_health_4: "Fatty Liver",
-        opt_health_5: "I take continuous medication",
-        opt_health_6: "Other",
-        lbl_main_reason: "What is the main reason you contacted us today?",
-        opt_reason_0: "Choose the main reason...",
-        opt_reason_1: "I want to lose weight",
-        opt_reason_2: "I want to improve my overall health",
-        opt_reason_3: "I want to improve my appearance and confidence",
-        opt_reason_4: "I feel lethargic and lack energy",
-        opt_reason_5: "My doctor advised me to start",
-        opt_reason_6: "I saw the results of a client",
-        opt_reason_7: "Other reason",
-        btn_submit: "Send Your Details Now",
-        cta_title: "Your decision today could change your life for years",
-        cta_desc: "Don't delay your health. Every day that passes is a missed opportunity to feel more energetic. Our team is waiting for you.",
-        cta_btn: "Contact Us Now",
-        footer_rights: "© 2026 Seha W Afya. All rights reserved.",
-        wa_template: "Hello Seha W Afya team,\n\nI want to evaluate my condition to join the program.\n\n👤 Name:\n{name}\n\n📅 Age:\n{age} years\n\n📍 City:\n{city}\n\n⚖️ Weight:\n{weight} kg\n\n🎯 Goal:\n{goal}\n\n🩺 Health Status:\n{health}\n\n⭐ Reason for contact:\n{mainReason}\n\nWaiting for your reply,\n\nThanks."
+      tzm: {
+        page_title: "ⵜⴰⴷⵓⵙⵉ ⴷ ⵍⵄⴰⴼⵉⵜ | ⵔⴰⵔ ⵜⴰⴷⵓⵙⵉ ⵏⵏⴽ",
+        hero_badge: "ⵜⴰⴷⵓⵙⵉ ⴷ ⵍⵄⴰⴼⵉⵜ",
+        hero_title: "ⵔⴰⵔ ⵜⴰⴷⵓⵙⵉ ⵏⵏⴽ ⴷ ⵜⵉⵇⵇⴰ ⵏⵏⴽ ⴷⵉ ⵉⵅⴼ ⵏⵏⴽ ⴰⴽⴷ <span class='text-gold'>ⵜⴰⴷⵓⵙⵉ ⴷ ⵍⵄⴰⴼⵉⵜ</span>",
+        hero_desc: "ⴰⵀⵉⵍ ⵉⵎⴷⴰⵏ ⵉⵜⵜⴰⵡⵙ ⴰⴽ ⴰⴷ ⵜⵙⵙⵏⵇⵚⴹ ⴰⵥⴰⵢ ⴷ ⴰⴷ ⵜⵙⵙⵉⵎⵖⵓⵔⴹ ⵜⴰⴷⵓⵙⵉ ⵏⵏⴽ ⵙ ⵓⴹⴼⴰⵕ ⵏ ⴽⵓ ⴰⵙⵙ ⴷ ⵓⵎⵓⵖ ⵉⵜⵜⴰⵡⵙⵏ.",
+        hero_btn: "ⴱⴷⵓ ⵖⵉⵍⴰ ⴳ ⵡⴰⵜⵙⴰⴱ",
+        hero_note: "ⴰⵎⵥ ⴰⵙⵇⵙⵉ ⵏⵏⴽ ⵖⵉⵍⴰ",
+        pain_title: "ⵉⵙ ⵉⵎⵙⴰⵙⴰ ⵡⴰⵢⴰ ⴷ ⵜⴰⴷⴷⴰⴷⵜ ⵏⵏⴽ?",
+        pain1_t: "ⵜⵉⵔⵎⵉⵜⵉⵏ ⵓⵔ ⵉⵎⵓⵔⵙⵏ",
+        pain1_d: "ⵜⵄⵕⴹⴹ ⴰⵟⵟⴰⵚ ⵏ ⵉⵏⴳⵔⴰⵡⵏ, ⵜⵙⵙⵏⵇⵚⴹ ⴰⵥⴰⵢ ⵎⴰⵛⴰ ⵜⵔⴰⵔⴷ ⵜ ⵉⴷ ⴰⵛⴽⵓ ⵓⵔ ⵜⵣⵎⵉⵔⴹ ⴰⴷ ⵜⴹⴼⴰⵕⴹ.",
+        pain2_t: "ⴰⵄⵢⴰ ⴷ ⵓⴼⵛⴰⵍ",
+        pain2_d: "ⵜⵜⵏⴽⴰⵔⴹ ⵜⵄⵢⵉⴹ, ⵜⵜⵄⴷⴷⴰⴹ ⵜⴰⵣⵎⵔⵜ ⵏⵏⴽ ⴳ ⵜⵓⵥⵥⵓⵎⵜ ⵏ ⵡⴰⵙⵙ.",
+        pain3_t: "ⵜⵉⴽⵙⵙⴰⴹ ⵏ ⵉⵎⵓⵅⴰⵏ",
+        pain3_d: "ⴰⵏⵣⴳⵓⵎ ⵅⴼ ⴰⵙⴽⴽⴰⵕ, ⵜⴰⵙⵎⵜ ⵏ ⵜⴰⵙⴰ, ⴷ ⵓⵥⴰⵢ.",
+        pain4_t: "ⴰⵙⵔⵓⵃ ⵏ ⵜⵉⵇⵇⴰ",
+        pain4_d: "ⵜⵜⴰⵊⴰⵏⵏⴱⴹ ⵜⵉⵎⵙⵎⵓⵏⵉⵏ, ⵓⵔ ⵜⵜⴰⴼⴰⴹ ⵉⵀⴷⵓⵎⵏ ⵉ ⴰⴽ ⵉⵄⵊⴱⵏ.",
+        pain5_t: "ⵜⴰⵔⵉⵜ ⵏ ⵓⵙⵏⴼⵍ",
+        pain5_d: "ⵜⵅⵙⴹ ⴰⴷ ⵜⵙⵙⵉⵎⵖⵓⵔⴹ ⵜⴰⴷⵓⵙⵉ ⵏⵏⴽ, ⵎⴰⵛⴰ ⵓⵔ ⵜⵙⵙⵉⵏⴹ ⵎⴰⵏⵉ ⵖⴰ ⵜⴱⴷⴰⴹ.",
+        pain6_t: "ⵜⵅⵙⴹ ⴰⵏⴰⵍ",
+        pain6_d: "ⵜⵙⵙⵏⴹ ⵉⵙ ⵜⵣⵎⵔⴹ ⴰⴷ ⵜⵎⵓⵔⵙⴹ ⵉⴳ ⵜⵓⴼⵉⴹ ⵎⴰ ⴰⴽ ⵉⵜⵜⵡⵊⵊⴰⵀⵏ ⴽⵓ ⴰⵙⵙ.",
+        culture_badge: "ⵜⵉⴷⵜ ⵏⵏⵖ",
+        culture_title: "ⵜⴰⵢⵔⵉ ⵏ ⵎⴰⵛⵛⴰ.. ⴷ <span class='text-red-500'>ⵜⴰⴼⵅⵅⴰⵜ ⵏ ⵓⵖⵔⵓⵎ</span> 🇲🇦",
+        culture_p1: "ⵎⴰⵛⵛⴰ ⴳ ⵜⵓⵙⵙⵏⴰ ⵏⵏⵖ ⵓⵔ ⵉⴳⵉ ⵖⴰⵙ ⵉ ⵜⵓⴷⵔⵜ, ⵉⴳⴰ ⵜⴰⵢⵔⵉ ⴷ ⵓⵙⵎⵓⵏ ⵏ ⵜⴰⵡⵊⴰ. ⴰⵖⵔⵓⵎ, ⵎⵙⵎⵎⵏ, ⴱⵖⵔⵉⵔ ⴷ ⵡⴰⵜⴰⵢ ⴳⴰⵏ ⵜⵉⴽⵜⴰⵢⵉⵏ ⵏⵏⵖ.",
+        culture_alert_title: "ⴰⵎⵉⵣⵉ ⴰⵙⵓⵙⵎⵉ",
+        culture_p2: "ⵎⴰⵛⵛⴰ, ⴰⵛⵛⴰ ⵏ ⵓⵖⵔⵓⵎ ⴷ ⵎⵙⵎⵎⵏ ⴽⵓ ⴰⵙⵙ ⵉⴳⴰ <strong>ⴰⵎⵏⵜⵉⵍ ⵉⵅⵅⵏ</strong> ⵉ ⵓⵙⴽⴽⴰⵕ ⴷ ⵓⵥⴰⵢ ⴳ ⵡⴰⵎⵓⵏ ⵏⵏⵖ. ⵜⵉⵎⵢⵓⵔⵉⵏ ⴰⴷ ⴰⵔ ⴰⵖ ⵜⵜⴽⵙⵏⵜ ⵜⴰⴷⵓⵙⵉ ⵏⵏⵖ.",
+        culture_p3: "ⵅⴼ ⵡⴰⵢⴰ, ⵜⵉⵔⵎⵉⵜ ⵏⵏⴽ ⴰⴽⵉⴷⵏⵖ <strong class='text-primary border-b-2 border-gold'>ⵓⵔ ⵜⴳⵉ ⵖⴰⵙ ⴰⵙⵏⵇⵚ ⵏ ⵓⵥⴰⵢ</strong>. ⵜⴳⴰ ⴰⵙⵏⴼⵍ ⵏ ⵜⵡⵏⴳⵉⵎⵜ ⵏⵏⵖ ⵅⴼ ⵎⴰⵛⵛⴰ ⴰⴼⴰⴷ ⴰⴷ ⵏⵔⴰⵔ ⵜⴰⴷⵓⵙⵉ ⵏⵏⵖ.",
+        food_title: "ⵓⵔ ⴰⴽ ⵏⵜⵜⵉⵏⵉ ⴰⴷ ⵜⵜⵊⴷ <span class='text-gold border-b-2 border-gold'>ⵎⴰⵛⵛⴰ ⴰⵎⵖⵔⵉⴱⵉ</span>",
+        food_p1: "ⴰⵙⵙⵉⵔ ⵓⵔ ⵉⴳⵉ ⴰⵃⵔⴰⵎ, ⵉⴳⴰ ⴰⴷ ⵜⵙⵙⵏⴹ ⵎⴰⵎⵏⴽ.",
+        food_i1_t: "ⵟⵟⴰⵊⵉⵏ, ⵣⵄⵍⵓⴽ",
+        food_i1_d: "ⴰⴷ ⴰⴽ ⵏⵙⵙⵍⵎⴷ ⵎⴰⵎⵏⴽ ⵖⴰ ⵜ ⵜⵛⵛⴹ ⴱⵍⴰ ⴰⴷ ⵉⴳⵍⵉⵏ ⴰⵙⴽⴽⴰⵕ.",
+        food_i2_t: "ⵉⴼⵙⵙⴰⵢⵏ ⵉⴷⵓⵙⴰⵏⵏ",
+        food_i2_d: "ⴰⴷ ⴰⴽ ⵏⴼⴽ ⵉⴼⵙⵙⴰⵢⵏ ⵉⵖⵓⴷⴰⵏ ⵉ ⵓⵖⵔⵓⵎ.",
+        quote_title: "ⵓⵔ ⵜⵅⵙⵉⴹ ⵛⴰ ⵏ <span class='text-red-500 line-through decoration-2'>ⵔⵉⵊⵉⵎ ⴰⵎⴰⵢⵏⵓ</span>.<br />ⵜⵅⵙⵉⴹ ⵛⴰ ⵏ <span class='text-gradient'>ⴰⵏⴳⵔⴰⵡ ⴰⴽ ⵉⵜⵜⴰⵡⵙⵏ ⴰⴷ ⵜⴹⴼⴰⵕⴹ</span>.",
+        quote_p2: "ⴰⵎⵓⵛⴽⵉⵍ ⵏ ⵜⵉⴷⵜ ⵉⴳⴰ ⴰⵛⴽⵓ ⵜⵜⵄⵕⴰⴹⴹ <span class='text-primary'>ⵡⴰⵃⴷⴽ</span>.",
+        quote_p3: "ⵅⴼ ⵡⴰⵢⴰ ⴰⵙ ⵏⵙⴽⵔ <strong class='text-primary'>ⵜⴰⴷⵓⵙⵉ ⴷ ⵍⵄⴰⴼⵉⵜ</strong>. ⴰⴷ ⴰⴽ ⵏⴼⴽ ⴰⵏⴰⵍ ⵏ ⴽⵓ ⴰⵙⵙ.",
+        how_title: "ⵎⴰⵎⵏⴽ ⵉⵙⵡⵓⵔⵉ ⵓⴰⵀⵉⵍ?",
+        how1_t: "ⴰⵙⵉⵜⴳ ⵏ ⵜⴰⴷⴷⴰⴷⵜ",
+        how1_d: "ⵏⵜⵜⵖⵔⴰ ⵜⴰⴷⴷⴰⴷⵜ ⵏⵏⴽ ⵜⴰⴷⵓⵙⴰⵏⵜ ⴷ ⵉⵡⵜⵜⴰⵙⵏ ⵏⵏⴽ.",
+        how2_t: "ⴰⵖⴰⵡⴰⵙ ⵉⵎⵙⴰⵙⴰⵏ",
+        how2_d: "ⵏⵙⴽⴰⵔ ⴰⴽ ⴰⵏⴳⵔⴰⵡ ⵉⴳⴰⵏ ⴰⵎⵖⵔⵉⴱⵉ ⴱⵍⴰ ⴰⵃⵔⴰⵎ.",
+        how3_t: "ⴰⴹⴼⴰⵕ ⵏ ⴽⵓ ⴰⵙⵙ",
+        how3_d: "ⴰⵎⵙⴰⵡⴰⵍ ⴽⵓ ⴰⵙⵙ ⴳ ⵡⴰⵜⵙⴰⴱ ⵉ ⵓⵙⵖⵜⵉ.",
+        how4_t: "ⴰⵎⵓⵖ ⵉⵜⵜⴰⵡⵙⵏ",
+        how4_d: "ⴰⴷⴼ ⵖⵔ ⵜⵔⴰⴱⴱⵓⵜ ⵏ ⵎⵉⴷⴷⵏ ⴰⵎ ⴽⵢⵢⵉⵏ.",
+        how5_t: "ⴰⵙⵉⵜⴳ ⵏ ⵜⵎⵓⵔⵙⵜ",
+        how5_d: "ⴰⵙⵏⴼⵍ ⵏ ⵓⵖⴰⵡⴰⵙ ⵙ ⵎⴰ ⵉⵎⵙⴰⵙⴰⵏ ⴷ ⵜⴼⴽⴽⴰ ⵏⵏⴽ.",
+        how6_t: "ⵜⵉⵢⴰⴼⵓⵜⵉⵏ ⵉⵖⵣⵣⵉⴼⵏ",
+        how6_d: "ⵍⵎⴷ ⵜⵓⴷⵔⵜ ⵜⴰⴷⵓⵙⴰⵏⵜ ⵉ ⴱⴷⴷⴰ.",
+        why_us: "ⵎⴰⵖⴼ ⴰⵖ ⵜⵜⵅⵜⴰⵕⵏ?",
+        feat1: "ⵜⵉⵔⵎⵉⵜ",
+        feat2: "ⴰⴹⴼⴰⵕ",
+        feat3: "ⴰⵎⵓⵖ",
+        feat4: "ⴰⵏⴰⵍ",
+        feat5: "ⵜⵉⵎⵓⵔⵙⵉⵏ",
+        feat6: "ⵉⴼⵙⵙⴰⵢⵏ",
+        success_title: "ⵜⵉⵏⵇⵇⵉⵙⵉⵏ ⵏ ⵜⵎⵓⵔⵙⵜ",
+        success_desc: "ⵙⵙⴼⵍⴷ ⵉ ⵜⵔⵎⵉⵜⵉⵏ ⵏ ⵜⵉⴷⵜ",
+        story1_name: "ⴼⴰⵟⵉⵎⴰ ⵣⵣⵀⵔⴰ",
+        story1_city: "ⴰⵏⴼⴰ",
+        story2_name: "ⴰⵃⵎⴰⴷ",
+        story2_city: "ⵕⵕⴱⴰⵟ",
+        story3_name: "ⵎَرْⵢⴰⵎ",
+        story3_city: "ⵎⵕⵕⴰⴽⵛ",
+        story4_name: "ⵅⴰⴷⵉⵊⴰ",
+        story4_city: "ⴰⴳⴰⴷⵉⵔ",
+        before: "ⴷⴰⵜ:",
+        after: "ⴹⴰⵕⵜ:",
+        story1_before: "ⴰⴼⵛⴰⵍ ⴷ ⵉⵏⵙⵓⵍⵉⵏ",
+        story1_after: "ⵜⴰⴷⵓⵙⵉ ⴷ ⵜⴰⵣⵎⵔⵜ",
+        story2_before: "ⴰⵥⴰⵢ ⴷ ⵓⴼⵛⴰⵍ",
+        story2_after: "ⵜⵉⵇⵇⴰ ⴷ ⵜⴰⵣⵎⵔⵜ",
+        story3_before: "ⴰⵥⴰⵢ",
+        story3_after: "ⵜⴰⴷⵓⵙⵉ ⵉⵖⵓⴷⴰⵏ",
+        story4_before: "ⵜⵉⵎⵢⵓⵔⵉⵏ ⵜⵉⵅⵅⵉⴱⵉⵏ",
+        story4_after: "ⵜⵓⴷⵔⵜ ⵜⴰⴷⵓⵙⴰⵏⵜ",
+        transform_title: "ⵉⵙⵏⴼⵍⵏ ⵉⴷⵓⵙⴰⵏⵏ",
+        trans1_t: "ⴰⵙⵔⵓⵔ ⵏ ⵜⵉⵇⵇⴰ",
+        trans1_d: "ⴹⴰⵕⵜ ⵏ ⵓⵄⵢⴰ, ⵜⵓⵖⴰⵍ ⴷ ⵜⴰⵣⵎⵔⵜ.",
+        trans2_t: "ⴰⵙⴼⴹ ⵏ ⵉⵏⵙⵓⵍⵉⵏ",
+        trans2_d: "ⴰⵙⵏⴼⵍ ⵏ ⵜⵓⴷⵔⵜ ⴷ ⵜⵎⵢⵓⵔⵉⵏ.",
+        trans3_t: "ⵜⴰⵣⵎⵔⵜ ⵢⴰⵜⵜⵓⵢⵏ",
+        trans3_d: "ⴰⵙⵏⵇⵚ ⵏ ⵓⵥⴰⵢ ⴷ ⵓⵄⵢⴰ.",
+        test1_d: "\"ⵙⵏⴼⵍⵖ ⵜⴰⵡⵏⴳⵉⵎⵜ ⵉⵏⵓ ⵅⴼ ⵓⵖⵔⵓⵎ. ⵓⵔ ⵊⵊⵓ ⵖⵉⵍⵖ ⴰⴷ ⵙⵏⴼⵍⵖ ⵜⵓⴷⵔⵜ ⵉⵏⵓ ⴱⵍⴰ ⵍⴰⵥ. ⴰⴹⴼⴰⵕ ⵉⴳⴰ ⵉⵎⵉⵇⵇ.\"",
+        test1_n: "ⵙⴰⵏⴰⴻ - ⵎⵕⵕⴰⴽⵛ",
+        test2_d: "\"ⵍⵍⵉⵖ ⵄⵢⴰⵖ ⴰⵟⵟⴰⵚ. ⴰⴽⴷ ⵜⴰⴷⵓⵙⵉ ⴷ ⵍⵄⴰⴼⵉⵜ, ⵔⴰⵔⵖ ⵜⴰⵣⵎⵔⵜ ⵉⵏⵓ ⴰⴽⴽⵯ.\"",
+        test2_n: "ⵢⴰⵙⵉⵏ - ⵟⴰⵏⵊⴰ",
+        faq_title: "ⵉⵙⵇⵙⵉⵜⵏ ⵉⵜⵜⵓⵄⴰⵡⴰⴷⵏ",
+        q1: "ⵉⵙ ⵖⴰ ⵊⵓⵄⵖ?",
+        a1: "ⵓⵀⵓ, ⴰⵀⵉⵍ ⵉⵜⵜⴼⴽⴰ ⵎⴰⵛⵛⴰ ⵉⵙⵙⵉⵡⴰⵏ.",
+        q2: "ⵉⵙ ⵉⵎⵙⴰⵙⴰ ⴷ ⵉⵎⵓⴹⴰⵏ ⵏ ⵓⵙⴽⴽⴰⵕ?",
+        a2: "ⵢⴰⵀ, ⵎⴰⵛⴰ ⵉⵇⵇⴰⵏ ⴷ ⴰⴷ ⵜⵙⵇⵙⵉⴹ ⴰⴹⴱⵉⴱ ⵏⵏⴽ.",
+        q3: "ⵉⵙ ⵖⴰ ⵊⵊⵖ ⴰⵖⵔⵓⵎ ⴰⴽⴽⵯ?",
+        a3: "ⵓⵀⵓ, ⴰⴷ ⴰⴽ ⵏⵙⵙⵍⵎⴷ ⵎⴰⵎⵏⴽ ⵖⴰ ⵜ ⵜⵛⵛⴹ ⵙ ⵜⵉⴷⵓⵙⵉ.",
+        q4: "ⵉⵙ ⵉⵍⵍⴰ ⵓⴹⴼⴰⵕ ⵏ ⴽⵓ ⴰⵙⵙ?",
+        a4: "ⵢⴰⵀ, ⴳ ⵡⴰⵜⵙⴰⴱ.",
+        q6: "ⵎⴰⵎⵏⴽ ⵖⴰ ⴱⴷⵓⵖ?",
+        a6: "ⵄⵎⵎⵕ ⵜⵉⴼⵉⵍⵜ ⴰⴷ.",
+        form_title: "ⴰⵙⵓⵔⴼ ⴰⵎⵣⵡⴰⵔⵓ ⵖⵔ ⵓⵙⵏⴼⵍ",
+        form_desc: "ⴼⴽ ⴰⵖ ⵉⵏⵖⵎⵉⵙⵏ ⵏⵏⴽ.",
+        lbl_name: "ⵉⵙⵎ ⵏⵏⴽ",
+        lbl_age: "ⴰⵡⵜⴰⵢ",
+        lbl_city: "ⵜⵉⵖⵔⵎⵜ",
+        lbl_weight: "ⴰⵥⴰⵢ",
+        lbl_goal: "ⵎⴰ ⵉⴳⴰⵏ ⵉⵡⵜⵜⴰⵙ ⵏⵏⴽ?",
+        opt_goal_0: "ⵅⵜⴰⵕ ⵉⵡⵜⵜⴰⵙ...",
+        opt_goal_1: "ⵜⴰⴷⵓⵙⵉ ⴷ ⵜⴰⵣⵎⵔⵜ",
+        opt_goal_2: "ⴰⵙⵏⵇⵚ ⵏ ⵓⵥⴰⵢ",
+        opt_goal_3: "ⴰⵙⵏⴼⵍ ⵏ ⵜⵎⵢⵓⵔⵉⵏ",
+        lbl_health: "ⵉⵙ ⴷⴰⵔⴽ ⵛⴰ ⵏ ⵜⵎⴰⴹⵓⵏⵜ?",
+        opt_health_0: "ⵅⵜⴰⵕ...",
+        opt_health_1: "ⵓⵀⵓ",
+        opt_health_2: "ⴰⵙⴽⴽⴰⵕ",
+        opt_health_3: "ⵉⵏⵙⵓⵍⵉⵏ",
+        opt_health_4: "ⵜⴰⵙⵎⵜ ⵏ ⵜⴰⵙⴰ",
+        opt_health_5: "ⴰⵔ ⵙⵡⴰⵖ ⵉⵙⴰⴼⴰⵔⵏ",
+        opt_health_6: "ⵢⴰⴹⵏ",
+        lbl_main_reason: "ⵎⴰⵖⴼ ⴰⵖ ⵜⵙⴰⵡⵍⴹ ⴰⵙⵙ ⴰⴷ?",
+        opt_reason_0: "ⵅⵜⴰⵕ ⴰⵎⵏⵜⵉⵍ...",
+        opt_reason_1: "ⵅⵙⵖ ⴰⴷ ⵙⵏⵇⵚⵖ ⴰⵥⴰⵢ",
+        opt_reason_2: "ⵅⵙⵖ ⴰⴷ ⵊⵊⵖ ⴰⵖⵔⵓⵎ",
+        opt_reason_3: "ⵅⵙⵖ ⴰⴷ ⵙⵉⵖⵣⵉⴼⵖ ⵜⵉⵇⵇⴰ",
+        opt_reason_4: "ⵄⵢⵉⵖ",
+        opt_reason_5: "ⵉⵏⵏⴰ ⵢⵉ ⴰⴹⴱⵉⴱ",
+        opt_reason_6: "ⵥⵕⵉⵖ ⵜⵉⵢⴰⴼⵓⵜⵉⵏ ⵏ ⵡⵉⵢⵢⴰⴹ",
+        opt_reason_7: "ⵢⴰⴹⵏ",
+        btn_submit: "ⴰⵣⵏ ⵉⵏⵖⵎⵉⵙⵏ ⵏⵏⴽ ⵖⵉⵍⴰ",
+        cta_title: "ⴰⵖⵜⵜⵙ ⵏⵏⴽ ⵏ ⴰⵙⵙ ⴰⴷ ⵉⵣⵎⵔ ⴰⴷ ⵉⵙⵏⴼⵍ ⵜⵓⴷⵔⵜ ⵏⵏⴽ",
+        cta_desc: "ⵓⵔ ⵜⵜⴰⵊⵊⴰ ⵜⴰⴷⵓⵙⵉ ⵏⵏⴽ. ⵜⴰⵔⴰⴱⴱⵓⵜ ⵏⵏⵖ ⵜⴰⵔⵊⵓ ⴽ.",
+        cta_btn: "ⵙⴰⵡⵍ ⴰⵖ ⴷ ⵖⵉⵍⴰ",
+        footer_rights: "© 2026 ⵜⴰⴷⵓⵙⵉ ⴷ ⵍⵄⴰⴼⵉⵜ. ⴰⴽⴽⵯ ⵉⵣⵔⴼⴰⵏ ⵃⴼⴹⵏ.",
+        wa_template: "ⴰⵣⵓⵍ ⵜⴰⵔⴰⴱⴱⵓⵜ ⵏ ⵜⴰⴷⵓⵙⵉ ⴷ ⵍⵄⴰⴼⵉⵜ,\n\nⵅⵙⵖ ⴰⴷ ⵜⵙⵉⵜⴳⵎ ⵜⴰⴷⴷⴰⴷⵜ ⵉⵏⵓ.\n\n👤 ⵉⵙⵎ:\n{name}\n\n📅 ⴰⵡⵜⴰⵢ:\n{age}\n\n📍 ⵜⵉⵖⵔⵎⵜ:\n{city}\n\n⚖️ ⴰⵥⴰⵢ:\n{weight} ⴽⵊ\n\n🎯 ⵉⵡⵜⵜⴰⵙ:\n{goal}\n\n🩺 ⵜⴰⴷⴷⴰⴷⵜ ⵜⴰⴷⵓⵙⴰⵏⵜ:\n{health}\n\n⭐ ⴰⵎⵏⵜⵉⵍ:\n{mainReason}\n\nⴰⵔⵊⵓⵖ ⴰⵎⵔⴰⵔ ⵏⵏⵡⵏ,\n\nⵜⴰⵏⵎⵎⵉⵔⵜ."
       },
       fr: {
         page_title: "Seha W Afya | Retrouvez Santé et Confiance",
@@ -948,7 +971,7 @@
         hero_title: "Retrouvez votre santé et votre confiance avec <span class='text-gold'>Seha W Afya</span>",
         hero_desc: "Un programme intégré pour vous aider à perdre du poids et améliorer votre santé avec un suivi quotidien et une communauté pour réussir.",
         hero_btn: "Commencez via WhatsApp",
-        hero_note: "Obtenez votre consultation",
+        hero_note: "Obtenez votre consultation gratuite",
         pain_title: "Cela décrit-il votre situation actuelle ?",
         pain1_t: "Tentatives Échouées",
         pain1_d: "Vous avez essayé de nombreux régimes, perdu du poids, puis repris car vous n'avez pas pu continuer.",
@@ -962,11 +985,22 @@
         pain5_d: "Vous voulez vraiment améliorer votre santé, mais vous ne savez pas par où ni comment commencer.",
         pain6_t: "Besoin de Soutien",
         pain6_d: "Vous savez que vous pouvez réussir si quelqu'un vous guide quotidiennement et vous soutient.",
+        culture_badge: "La vraie cause",
+        culture_title: "Notre amour pour la nourriture.. et le <span class='text-red-500'>piège des pâtisseries</span> 🇲🇦",
+        culture_p1: "La nourriture dans notre culture n'est pas qu'un moyen de survie, c'est un langage d'amour. L'odeur du pain frais, du Msemen et du Baghrir avec du thé sont gravés en nous.",
+        culture_alert_title: "Le Danger Silencieux",
+        culture_p2: "Cependant, cette dépendance quotidienne au pain blanc et aux pâtisseries est devenue la <strong>cause désastreuse</strong> de la propagation de la résistance à l'insuline et de l'obésité au Maroc. Votre échec n'est pas un manque de volonté, c'est une addiction causée par l'alimentation.",
+        culture_p3: "C'est pourquoi votre expérience avec nous <strong class='text-primary border-b-2 border-gold'>n'est pas qu'une perte de poids</strong>. C'est une prise de conscience pour changer notre vision de la nourriture et retrouver notre santé.",
+        food_title: "Après cette prise de conscience.. Pas besoin d'abandonner la <span class='text-gold border-b-2 border-gold'>Cuisine Marocaine</span>",
+        food_p1: "Le secret n'est pas la privation totale, mais la compréhension. Apprenez à manger intelligemment.",
+        food_i1_t: "Tajine, Zaalouk, Grillades",
+        food_i1_d: "Nous vous apprendrons à les manger de manière saine sans pics de glycémie.",
+        food_i2_t: "Alternatives Saines",
+        food_i2_d: "Des alternatives intelligentes au pain pour profiter de vos repas sans détruire votre santé.",
         quote_title: "Vous n'avez pas besoin d'un <span class='text-red-500 line-through decoration-2'>nouveau régime</span>.<br />Vous avez besoin d'un <span class='text-gradient'>système qui vous aide à rester constant</span>.",
-        quote_p1: "Pourquoi la plupart des pertes de poids échouent ? Le problème n'est pas votre manque de volonté.",
         quote_p2: "Le vrai problème est d'essayer <span class='text-primary'>seul</span> dans un environnement non favorable.",
         quote_p3: "C'est exactement pourquoi nous avons fondé <strong class='text-primary'>Seha W Afya</strong>. Pour vous offrir l'environnement, le plan et le soutien quotidien pour atteindre votre objectif sans jamais reculer.",
-        how_title: "Comment ça marche ?",
+        how_title: "Comment vous sortir de cette spirale ?",
         how1_t: "Évaluation",
         how1_d: "Nous étudions votre état de santé, vos objectifs et votre mode de vie avec précision.",
         how2_t: "Plan Personnalisé",
@@ -979,6 +1013,13 @@
         how5_d: "Mises à jour hebdomadaires et ajustements du plan en fonction de votre corps.",
         how6_t: "Résultats Durables",
         how6_d: "Apprenez un mode de vie qui vous aide à maintenir votre santé pour toujours.",
+        why_us: "Pourquoi tout le monde nous choisit ?",
+        feat1: "Longue Expérience",
+        feat2: "Suivi Quotidien",
+        feat3: "Communauté",
+        feat4: "Soutien Continu",
+        feat5: "Résultats prouvés",
+        feat6: "Solutions sur mesure",
         success_title: "Histoires de Réussite",
         success_desc: "Écoutez de vraies expériences de personnes qui ont changé leur vie avec nous",
         story1_name: "Fatima Ezzahra",
@@ -987,7 +1028,7 @@
         story2_city: "Rabat",
         story3_name: "Maryam",
         story3_city: "Marrakech",
-        story4_name: "Youssef",
+        story4_name: "Khadija",
         story4_city: "Agadir",
         before: "Avant :",
         after: "Après :",
@@ -1006,34 +1047,19 @@
         trans2_d: "Un changement radical de mode de vie, de meilleures habitudes et d'excellents marqueurs de santé.",
         trans3_t: "Haute Vitalité & Forme",
         trans3_d: "Un succès couronné par la réduction des problèmes d'obésité et le retour de la vitalité.",
-        why_us: "Pourquoi tout le monde nous choisit ?",
-        feat1: "Longue Expérience",
-        feat2: "Suivi Quotidien",
-        feat3: "Communauté",
-        feat4: "Soutien Continu",
-        feat5: "Témoignages de réussite",
-        feat6: "Solutions sur mesure",
-        food_title: "Pas besoin d'abandonner la <span class='text-gold border-b-2 border-gold'>Cuisine Marocaine</span>",
-        food_p1: "Le secret n'est pas la privation, mais savoir comment et quand manger vos plats préférés.",
-        food_i1_t: "Tajine, Zaalouk, Grillades",
-        food_i1_d: "Nous vous apprendrons à les manger de manière saine et en bonnes portions.",
-        food_i2_t: "Petit-déjeuner Marocain",
-        food_i2_d: "Des alternatives intelligentes pour profiter d'une matinée saine.",
-        test1_d: "\"Je n'aurais jamais imaginé changer ma vie ainsi sans avoir faim. Le soutien quotidien a fait toute la différence.\"",
+        test1_d: "\"Ma vision du pain a totalement changé. Je n'aurais jamais imaginé changer ma vie ainsi sans avoir faim.\"",
         test1_n: "Sanaa - Marrakech",
         test2_d: "\"Je souffrais de fatigue à cause de la résistance à l'insuline. Avec vous, j'ai retrouvé toute mon énergie.\"",
         test2_n: "Yassine - Tanger",
         faq_title: "Questions Fréquemment Posées",
         q1: "Vais-je avoir faim ?",
-        a1: "Le programme est conçu pour fournir des repas nutritifs et rassasiants adaptés à vous.",
+        a1: "Le programme est conçu pour fournir des repas rassasiants qui empêchent les pics d'insuline responsables de la faim.",
         q2: "Est-ce adapté aux diabétiques ?",
         a2: "Chaque cas est traité selon son état. Un avis médical est conseillé pour le diabète.",
-        q3: "Est-ce pour hommes et femmes ?",
-        a3: "Oui, le plan est personnalisé pour s'adapter à la nature et aux objectifs de chacun.",
+        q3: "Dois-je arrêter le pain ?",
+        a3: "Non, mais nous vous apprendrons à choisir des alternatives et comment le consommer sans nuire à votre santé.",
         q4: "Y a-t-il un suivi quotidien ?",
         a4: "Oui, nous communiquons avec vous quotidiennement via WhatsApp pour vous guider.",
-        q5: "Y a-t-il une communauté de soutien ?",
-        a5: "Oui, vous rejoindrez un groupe dédié pour échanger des encouragements et des conseils.",
         q6: "Comment commencer ?",
         a6: "Remplissez le formulaire ci-dessous et vous serez redirigé vers WhatsApp.",
         form_title: "Votre Premier Pas Vers le Changement",
@@ -1045,8 +1071,8 @@
         lbl_goal: "Quel est votre objectif principal ?",
         opt_goal_0: "Choisissez votre objectif...",
         opt_goal_1: "Améliorer la santé générale",
-        opt_goal_2: "Se débarrasser de l'obésité",
-        opt_goal_3: "Apprendre un mode de vie sain",
+        opt_goal_2: "Se débarrasser de l'obésité et l'insuline",
+        opt_goal_3: "Changer d'habitudes et mode de vie sain",
         lbl_health: "Souffrez-vous de problèmes de santé ?",
         opt_health_0: "Choisissez la condition...",
         opt_health_1: "Non, je n'ai aucun problème de santé",
@@ -1055,12 +1081,12 @@
         opt_health_4: "Foie gras",
         opt_health_5: "Je prends des médicaments en continu",
         opt_health_6: "Autre",
-        lbl_main_reason: "Quelle est la raison principale pour laquelle vous nous contactez aujourd'hui ?",
+        lbl_main_reason: "Quelle est la raison principale de votre contact ?",
         opt_reason_0: "Choisissez la raison principale...",
-        opt_reason_1: "Je veux perdre du poids",
-        opt_reason_2: "Je veux améliorer ma santé globale",
-        opt_reason_3: "Je veux améliorer mon apparence et ma confiance",
-        opt_reason_4: "Je me sens léthargique et manque d'énergie",
+        opt_reason_1: "Je veux perdre du poids consciemment",
+        opt_reason_2: "Je veux me débarrasser de l'addiction au pain",
+        opt_reason_3: "Je veux améliorer mon apparence",
+        opt_reason_4: "Je me sens léthargique",
         opt_reason_5: "Mon médecin m'a conseillé de commencer",
         opt_reason_6: "J'ai vu les résultats d'un client",
         opt_reason_7: "Autre raison",
@@ -1079,11 +1105,9 @@
       currentLang = lang;
       const t = translations[lang];
 
-      // Update HTML attributes
       document.documentElement.lang = lang;
       document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
 
-      // Update all elements with data-i18n
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (t[key]) {
@@ -1091,7 +1115,6 @@
         }
       });
 
-      // Reset accordion icons direction fix if needed
       document.querySelectorAll('.faq-btn i').forEach(function (el) {
         el.style.transform = 'rotate(0deg)';
       });
@@ -1100,25 +1123,21 @@
       });
     }
 
-    // دالة لتحويل الأرقام العربية إلى إنجليزية لتمرير التقييم بنجاح
     function convertToArabicAndEnglishLive(e) {
       const arabicNumbers = [/٠/g, /١/g, /٢/g, /٣/g, /٤/g, /٥/g, /٦/g, /٧/g, /٨/g, /٩/g];
       let val = e.target.value;
       for (let i = 0; i < 10; i++) {
           val = val.replace(arabicNumbers[i], i);
       }
-      // إزالة أي رموز أو حروف (الإبقاء فقط على الأرقام الإنجليزية)
       e.target.value = val.replace(/[^0-9]/g, '');
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-      // Setup Language Switcher
       const langSelector = document.getElementById('langSelector');
       langSelector.addEventListener('change', (e) => {
         changeLanguage(e.target.value);
       });
 
-      // إرفاق دالة تحويل الأرقام بحقول العمر والوزن
       const numberInputs = ['wa-age', 'wa-weight'];
       numberInputs.forEach(id => {
           const input = document.getElementById(id);
@@ -1189,10 +1208,8 @@
       const mainReasonEl = document.getElementById('wa-mainReason');
       const mainReason = mainReasonEl.options[mainReasonEl.selectedIndex].text;
 
-      // Get translation template
       let messageTemplate = translations[currentLang].wa_template;
       
-      // Replace placeholders
       let message = messageTemplate
         .replace('{name}', name)
         .replace('{age}', age)
@@ -1209,5 +1226,6 @@
   </script>
 </body>
 </html>
+
 
 ```
