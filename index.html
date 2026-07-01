@@ -193,6 +193,18 @@
           <span data-i18n="hero_badge">صحة وعافية</span>
         </span>
       </div>
+      <!-- Authority Badge: Doctor Supervision (added) -->
+      <div class="mb-6 inline-block fade-up">
+        <span class="inline-flex items-center gap-3 bg-white/10 border border-gold/40 rounded-full pe-5 ps-2 py-1.5 backdrop-blur-sm text-start">
+          <span class="w-8 h-8 rounded-full bg-gold/20 border border-gold/60 flex items-center justify-center text-gold text-sm shrink-0">
+            <i class="fas fa-user-doctor"></i>
+          </span>
+          <span class="flex flex-col leading-tight">
+            <span class="text-gold font-bold text-xs md:text-sm" data-i18n="doctor_badge_title">بإشراف د. محمد سعيد</span>
+            <span class="text-gray-200 text-[10px] md:text-xs" data-i18n="doctor_badge_desc">طبيب متخصص في التغذية العلاجية ومتابعة حالات السمنة</span>
+          </span>
+        </span>
+      </div>
       <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight max-w-4xl glow-text drop-shadow-lg fade-up" style="transition-delay: 100ms;" data-i18n="hero_title">
         استعد صحتك وثقتك بنفسك مع <span class="text-gold">صحة وعافية</span>
       </h1>
@@ -434,6 +446,54 @@
     </div>
   </section>
 
+  <!-- 6.5 Doctor Authority Section (added) -->
+  <section class="py-20 bg-white relative border-t border-gray-100">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div class="text-center mb-14 fade-up">
+        <span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary font-bold text-sm mb-4" data-i18n="doctor_section_badge">الإشراف الطبي</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4" data-i18n="doctor_section_title">من يشرف على البرنامج؟</h2>
+        <div class="h-1 w-24 bg-gold mx-auto rounded-full"></div>
+      </div>
+      <div class="flex flex-col lg:flex-row items-center gap-12 fade-up">
+        <div class="lg:w-1/3 flex flex-col items-center text-center shrink-0">
+          <!-- TODO: replace with official doctor profile image -->
+          <div class="w-32 h-32 md:w-40 md:h-40 rounded-full bg-primary/10 border-4 border-gold/40 flex items-center justify-center text-primary text-5xl shadow-md mb-4">
+            <i class="fas fa-user-doctor"></i>
+          </div>
+          <h3 class="text-xl font-bold text-dark" data-i18n="doctor_name">د. محمد سعيد</h3>
+          <p class="text-gray-500 text-sm max-w-[220px]" data-i18n="doctor_role">طبيب متخصص في التغذية العلاجية ومتابعة حالات السمنة</p>
+          <a href="https://www.tiktok.com/@mohamedsaieedhealth?_r=1&_t=ZS-97fLGdYxdMz" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 border border-gold text-primary hover:bg-gold hover:text-white font-bold text-sm py-2 px-5 rounded-full transition-colors duration-300">
+            <i class="fab fa-tiktok"></i>
+            <span data-i18n="doctor_tiktok_btn">زيارة حساب د. محمد سعيد</span>
+          </a>
+        </div>
+        <div class="lg:w-2/3">
+          <p class="text-lg text-gray-700 leading-relaxed mb-8" data-i18n="doctor_section_desc">
+            يشرف د. محمد سعيد على البرنامج من خلال وضع البروتوكولات الغذائية ومراجعة جودة المتابعة، لضمان أن تكون الرحلة مناسبة للحالة الصحية ونمط الحياة.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-light p-4 rounded-xl border border-gray-100 flex items-center gap-3">
+              <i class="fas fa-check-circle text-gold shrink-0"></i>
+              <span class="text-dark text-sm font-bold" data-i18n="doctor_li1">تغذية علاجية</span>
+            </div>
+            <div class="bg-light p-4 rounded-xl border border-gray-100 flex items-center gap-3">
+              <i class="fas fa-check-circle text-gold shrink-0"></i>
+              <span class="text-dark text-sm font-bold" data-i18n="doctor_li2">بروتوكولات واضحة</span>
+            </div>
+            <div class="bg-light p-4 rounded-xl border border-gray-100 flex items-center gap-3">
+              <i class="fas fa-check-circle text-gold shrink-0"></i>
+              <span class="text-dark text-sm font-bold" data-i18n="doctor_li3">متابعة جودة الخدمة والنتائج</span>
+            </div>
+            <div class="bg-light p-4 rounded-xl border border-gray-100 flex items-center gap-3">
+              <i class="fas fa-check-circle text-gold shrink-0"></i>
+              <span class="text-dark text-sm font-bold" data-i18n="doctor_li4">حضور رقمي واسع في المحتوى الصحي</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 7. Why Us Section -->
   <section class="py-20 bg-primaryLight text-white relative">
     <div class="container mx-auto px-6 max-w-6xl text-center">
@@ -443,7 +503,7 @@
         <div class="p-6 bg-primary rounded-xl border border-white/10 fade-up"><i class="fas fa-mobile-alt text-3xl text-gold mb-3"></i><h4 class="font-bold" data-i18n="feat2">متابعة يومية</h4></div>
         <div class="p-6 bg-primary rounded-xl border border-white/10 fade-up"><i class="fas fa-users text-3xl text-gold mb-3"></i><h4 class="font-bold" data-i18n="feat3">مجتمع داعم</h4></div>
         <div class="p-6 bg-primary rounded-xl border border-white/10 fade-up"><i class="fas fa-headset text-3xl text-gold mb-3"></i><h4 class="font-bold" data-i18n="feat4">دعم مستمر</h4></div>
-        <div class="p-6 bg-primary rounded-xl border border-white/10 fade-up"><i class="fas fa-certificate text-3xl text-gold mb-3"></i><h4 class="font-bold" data-i18n="feat5">نتائج مثبتة</h4></div>
+        <div class="p-6 bg-primary rounded-xl border border-white/10 fade-up"><i class="fas fa-certificate text-3xl text-gold mb-3"></i><h4 class="font-bold" data-i18n="feat5">تجارب عملاء</h4></div>
         <div class="p-6 bg-primary rounded-xl border border-white/10 fade-up"><i class="fas fa-leaf text-3xl text-gold mb-3"></i><h4 class="font-bold" data-i18n="feat6">حلول تناسبك</h4></div>
       </div>
     </div>
@@ -522,7 +582,7 @@
               </div>
               <div class="flex justify-between items-center pt-1">
                 <span class="text-gray-400 text-xs" data-i18n="after">النتيجة بعد:</span>
-                <span class="font-bold text-green-400 text-end" data-i18n="story3_after">حيوية وشفاء</span>
+                <span class="font-bold text-green-400 text-end" data-i18n="story3_after">حيوية وتحسن ملحوظ</span>
               </div>
             </div>
           </div>
@@ -575,7 +635,7 @@
           <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center text-primary text-4xl mx-auto mb-6">
             <i class="fas fa-heartbeat"></i>
           </div>
-          <h3 class="font-bold text-xl text-dark mb-3" data-i18n="trans2_t">التخلص من مقاومة الإنسولين</h3>
+          <h3 class="font-bold text-xl text-dark mb-3" data-i18n="trans2_t">تحسن نمط الحياة والمؤشرات الصحية</h3>
           <p class="text-gray-600 text-sm leading-relaxed mb-4" data-i18n="trans2_d">تغيير جذري في نمط الحياة، تحسنت العادات الغذائية، وتحسنت المؤشرات الصحية بشكل ملحوظ.</p>
           <div class="text-gold"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
         </div>
@@ -677,6 +737,10 @@
         <div class="text-center mb-10">
           <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4" data-i18n="form_title">خطوتك الأولى نحو التغيير والوعي</h2>
           <p class="text-gray-600" data-i18n="form_desc">أدخل بياناتك الأساسية وسنتواصل معك لتقييم حالتك.</p>
+          <p class="text-gray-500 text-sm mt-2 flex items-center justify-center gap-2">
+            <i class="fas fa-lock text-xs"></i>
+            <span data-i18n="form_privacy_note">التقييم الأولي عبر واتساب، وبياناتك تُستخدم فقط لفهم حالتك وتجهيز الرد المناسب لك.</span>
+          </p>
         </div>
         <form id="leadForm" class="space-y-6 text-start">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -771,6 +835,19 @@
       ar: {
         page_title: "صحة وعافية | استعد صحتك وثقتك بنفسك",
         hero_badge: "صحة وعافية",
+        doctor_badge_title: "بإشراف د. محمد سعيد",
+        doctor_badge_desc: "طبيب متخصص في التغذية العلاجية ومتابعة حالات السمنة",
+        doctor_section_badge: "الإشراف الطبي",
+        doctor_section_title: "من يشرف على البرنامج؟",
+        doctor_section_desc: "يشرف د. محمد سعيد على البرنامج من خلال وضع البروتوكولات الغذائية ومراجعة جودة المتابعة، لضمان أن تكون الرحلة مناسبة للحالة الصحية ونمط الحياة.",
+        doctor_name: "د. محمد سعيد",
+        doctor_role: "طبيب متخصص في التغذية العلاجية ومتابعة حالات السمنة",
+        doctor_li1: "تغذية علاجية",
+        doctor_li2: "بروتوكولات واضحة",
+        doctor_li3: "متابعة جودة الخدمة والنتائج",
+        doctor_li4: "حضور رقمي واسع في المحتوى الصحي",
+        doctor_tiktok_btn: "زيارة حساب د. محمد سعيد",
+        form_privacy_note: "التقييم الأولي عبر واتساب، وبياناتك تُستخدم فقط لفهم حالتك وتجهيز الرد المناسب لك.",
         hero_title: "استعد صحتك وثقتك بنفسك مع <span class='text-gold'>صحة وعافية</span>",
         hero_desc: "برنامج متكامل يساعدك على خسارة الوزن وتحسين صحتك من خلال المتابعة اليومية، الدعم المستمر، ومجتمع يساعدك على النجاح.",
         hero_btn: "ابدأ الآن عبر واتساب",
@@ -821,7 +898,7 @@
         feat2: "متابعة يومية",
         feat3: "مجتمع داعم",
         feat4: "دعم مستمر",
-        feat5: "نتائج مثبتة",
+        feat5: "تجارب عملاء",
         feat6: "حلول تناسبك",
         success_title: "أبطال كسروا الدوامة",
         success_desc: "استمع لتجارب حقيقية لأشخاص غيروا حياتهم الصحية معنا للأبد",
@@ -840,13 +917,13 @@
         story2_before: "سمنة وصعوبة في الحركة",
         story2_after: "لياقة وثقة بالنفس",
         story3_before: "وزن زائد وغدة",
-        story3_after: "حيوية وشفاء",
+        story3_after: "حيوية وتحسن ملحوظ",
         story4_before: "عادات سيئة",
         story4_after: "أسلوب حياة صحي",
         transform_title: "تحولات صحية مذهلة",
         trans1_t: "استعادة الثقة والنشاط",
         trans1_d: "بعد معاناة طويلة مع الخمول والشعور بالتعب المستمر، أصبحت الحركة جزءاً من يومها واستعادت ثقتها بنفسها.",
-        trans2_t: "التخلص من مقاومة الإنسولين",
+        trans2_t: "تحسن نمط الحياة والمؤشرات الصحية",
         trans2_d: "تغيير جذري في نمط الحياة، تحسنت العادات الغذائية، وتحسنت المؤشرات الصحية بشكل ملحوظ.",
         trans3_t: "حيوية ولياقة عالية",
         trans3_d: "رحلة نجاح تكللت بتقليل مشاكل السمنة المزعجة وعودة الحيوية والطاقة للمهام اليومية.",
@@ -903,6 +980,19 @@
       tzm: {
         page_title: "ⵜⴰⴷⵓⵙⵉ ⴷ ⵍⵄⴰⴼⵉⵜ | ⵔⴰⵔ ⵜⴰⴷⵓⵙⵉ ⵏⵏⴽ",
         hero_badge: "ⵜⴰⴷⵓⵙⵉ ⴷ ⵍⵄⴰⴼⵉⵜ",
+        doctor_badge_title: "بإشراف د. محمد سعيد",
+        doctor_badge_desc: "طبيب متخصص في التغذية العلاجية ومتابعة حالات السمنة",
+        doctor_section_badge: "الإشراف الطبي",
+        doctor_section_title: "من يشرف على البرنامج؟",
+        doctor_section_desc: "يشرف د. محمد سعيد على البرنامج من خلال وضع البروتوكولات الغذائية ومراجعة جودة المتابعة، لضمان أن تكون الرحلة مناسبة للحالة الصحية ونمط الحياة.",
+        doctor_name: "د. محمد سعيد",
+        doctor_role: "طبيب متخصص في التغذية العلاجية ومتابعة حالات السمنة",
+        doctor_li1: "تغذية علاجية",
+        doctor_li2: "بروتوكولات واضحة",
+        doctor_li3: "متابعة جودة الخدمة والنتائج",
+        doctor_li4: "حضور رقمي واسع في المحتوى الصحي",
+        doctor_tiktok_btn: "زيارة حساب د. محمد سعيد",
+        form_privacy_note: "التقييم الأولي عبر واتساب، وبياناتك تُستخدم فقط لفهم حالتك وتجهيز الرد المناسب لك.",
         hero_title: "ⵔⴰⵔ ⵜⴰⴷⵓⵙⵉ ⵏⵏⴽ ⴷ ⵜⵉⵇⵇⴰ ⵏⵏⴽ ⴷⵉ ⵉⵅⴼ ⵏⵏⴽ ⴰⴽⴷ <span class='text-gold'>ⵜⴰⴷⵓⵙⵉ ⴷ ⵍⵄⴰⴼⵉⵜ</span>",
         hero_desc: "ⴰⵀⵉⵍ ⵉⵎⴷⴰⵏ ⵉⵜⵜⴰⵡⵙ ⴰⴽ ⴰⴷ ⵜⵙⵙⵏⵇⵚⴹ ⴰⵥⴰⵢ ⴷ ⴰⴷ ⵜⵙⵙⵉⵎⵖⵓⵔⴹ ⵜⴰⴷⵓⵙⵉ ⵏⵏⴽ ⵙ ⵓⴹⴼⴰⵕ ⵏ ⴽⵓ ⴰⵙⵙ ⴷ ⵓⵎⵓⵖ ⵉⵜⵜⴰⵡⵙⵏ.",
         hero_btn: "ⴱⴷⵓ ⵖⵉⵍⴰ ⴳ ⵡⴰⵜⵙⴰⴱ",
@@ -953,7 +1043,7 @@
         feat2: "ⴰⴹⴼⴰⵕ",
         feat3: "ⴰⵎⵓⵖ",
         feat4: "ⴰⵏⴰⵍ",
-        feat5: "ⵜⵉⵎⵓⵔⵙⵉⵏ",
+        feat5: "تجارب عملاء",
         feat6: "ⵉⴼⵙⵙⴰⵢⵏ",
         success_title: "ⵜⵉⵏⵇⵇⵉⵙⵉⵏ ⵏ ⵜⵎⵓⵔⵙⵜ",
         success_desc: "ⵙⵙⴼⵍⴷ ⵉ ⵜⵔⵎⵉⵜⵉⵏ ⵏ ⵜⵉⴷⵜ",
@@ -972,13 +1062,13 @@
         story2_before: "ⴰⵥⴰⵢ ⴷ ⵓⴼⵛⴰⵍ",
         story2_after: "ⵜⵉⵇⵇⴰ ⴷ ⵜⴰⵣⵎⵔⵜ",
         story3_before: "ⴰⵥⴰⵢ",
-        story3_after: "ⵜⴰⴷⵓⵙⵉ ⵉⵖⵓⴷⴰⵏ",
+        story3_after: "حيوية وتحسن ملحوظ",
         story4_before: "ⵜⵉⵎⵢⵓⵔⵉⵏ ⵜⵉⵅⵅⵉⴱⵉⵏ",
         story4_after: "ⵜⵓⴷⵔⵜ ⵜⴰⴷⵓⵙⴰⵏⵜ",
         transform_title: "ⵉⵙⵏⴼⵍⵏ ⵉⴷⵓⵙⴰⵏⵏ",
         trans1_t: "ⴰⵙⵔⵓⵔ ⵏ ⵜⵉⵇⵇⴰ",
         trans1_d: "ⴹⴰⵕⵜ ⵏ ⵓⵄⵢⴰ, ⵜⵓⵖⴰⵍ ⴷ ⵜⴰⵣⵎⵔⵜ.",
-        trans2_t: "ⴰⵙⴼⴹ ⵏ ⵉⵏⵙⵓⵍⵉⵏ",
+        trans2_t: "تحسن نمط الحياة والمؤشرات الصحية",
         trans2_d: "ⴰⵙⵏⴼⵍ ⵏ ⵜⵓⴷⵔⵜ ⴷ ⵜⵎⵢⵓⵔⵉⵏ.",
         trans3_t: "ⵜⴰⵣⵎⵔⵜ ⵢⴰⵜⵜⵓⵢⵏ",
         trans3_d: "ⴰⵙⵏⵇⵚ ⵏ ⵓⵥⴰⵢ ⴷ ⵓⵄⵢⴰ.",
@@ -1035,6 +1125,19 @@
       fr: {
         page_title: "Seha W Afya | Retrouvez Santé et Confiance",
         hero_badge: "Seha W Afya",
+        doctor_badge_title: "Sous la supervision du Dr. Mohamed Saïd",
+        doctor_badge_desc: "Médecin spécialisé en nutrition thérapeutique et suivi de l'obésité",
+        doctor_section_badge: "Supervision Médicale",
+        doctor_section_title: "Qui supervise le programme ?",
+        doctor_section_desc: "Le Dr. Mohamed Saïd supervise le programme en établissant les protocoles nutritionnels et en contrôlant la qualité du suivi, pour garantir un parcours adapté à votre état de santé et votre mode de vie.",
+        doctor_name: "Dr. Mohamed Saïd",
+        doctor_role: "Médecin spécialisé en nutrition thérapeutique et suivi de l'obésité",
+        doctor_li1: "Nutrition thérapeutique",
+        doctor_li2: "Protocoles clairs",
+        doctor_li3: "Suivi de la qualité du service et des résultats",
+        doctor_li4: "Large présence numérique dans le contenu santé",
+        doctor_tiktok_btn: "Visiter le compte du Dr. Mohamed Saïd",
+        form_privacy_note: "L'évaluation initiale se fait via WhatsApp, et vos données sont utilisées uniquement pour comprendre votre situation et préparer la réponse adaptée.",
         hero_title: "Retrouvez votre santé et votre confiance avec <span class='text-gold'>Seha W Afya</span>",
         hero_desc: "Un programme intégré pour vous aider à perdre du poids et améliorer votre santé avec un suivi quotidien et une communauté pour réussir.",
         hero_btn: "Commencez via WhatsApp",
@@ -1085,7 +1188,7 @@
         feat2: "Suivi Quotidien",
         feat3: "Communauté",
         feat4: "Soutien Continu",
-        feat5: "Résultats prouvés",
+        feat5: "Expériences clients",
         feat6: "Solutions sur mesure",
         success_title: "Histoires de Réussite",
         success_desc: "Écoutez de vraies expériences de personnes qui ont changé leur vie avec nous",
@@ -1110,7 +1213,7 @@
         transform_title: "Transformations Incroyables",
         trans1_t: "Confiance & Énergie Retrouvées",
         trans1_d: "Après avoir souffert de léthargie, le mouvement fait partie de sa journée et elle a retrouvé confiance.",
-        trans2_t: "Fin de la Résistance à l'insuline",
+        trans2_t: "Amélioration du mode de vie et des indicateurs de santé",
         trans2_d: "Un changement radical de mode de vie, de meilleures habitudes et d'excellents marqueurs de santé.",
         trans3_t: "Haute Vitalité & Forme",
         trans3_d: "Un succès couronné par la réduction des problèmes d'obésité et le retour de la vitalité.",
@@ -1293,5 +1396,3 @@
   </script>
 </body>
 </html>
-
-```
